@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VR Dunhuang《敦煌艺术》 · 李嘉纬作品集</title>
+<meta name="description" content="VR Dunhuang：Unity + Meta Quest 的手势交互 VR 探索游戏，北京工业大学本科小组项目。李嘉纬负责手势追踪交互程序与场景交互设计。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>VR Dunhuang《敦煌艺术》</h1>
+    <p class="sub">面向 Meta Quest 的 VR 探索游戏：玩家在莫高窟 302 窟里挑选一件艺术品，用手抓起它、走进它想象出的世界——九色鹿、金刚经、倒塔中心柱——用手势与场景互动、传送。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2025.02 – 2025.04</div></div><div class="fact"><div class="k">团队</div><div class="v">北京工业大学 · 本科小组项目</div></div><div class="fact"><div class="k">引擎</div><div class="v">Unity · Meta Quest（Oculus / Meta XR SDK）</div></div><div class="fact"><div class="k">我的角色</div><div class="v">程序 · 交互设计</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><figure class=""><img src="assets/img/dunhuang/cave-hero.jpg" alt="莫高窟洞窟：写实风格复现壁画与中心柱"><figcaption>莫高窟洞窟：写实风格复现壁画与中心柱</figcaption></figure></div>
+    <div class="cols">
+      <div><h2>项目概述</h2>
+<p>VR Dunhuang 是一款面向 Meta Quest 的 Unity VR 探索游戏，没有传统的胜负条件，目标是让玩家通过与艺术品的互动理解和体验敦煌艺术。游戏虚拟重建了三件经典作品：<strong>九色鹿本生</strong>、<strong>金刚经变</strong>和<strong>莫高窟 302 窟的倒塔中心柱</strong>。玩家先在写实复现的洞窟里挑选一件作品，用手抓起它放到指定位置，就会进入这件作品“想象出来的”场景；每个场景都有独特的交互元素，解锁更多关于作品的信息和文化故事。</p><div class="media media-grid"><figure class=""><img src="assets/img/dunhuang/pick-scene.jpg" alt="洞窟中挑选作品"><figcaption>洞窟中挑选作品</figcaption></figure><figure class=""><img src="assets/img/dunhuang/enter-scene.jpg" alt="抓起作品，放到指定位置进入场景"><figcaption>抓起作品，放到指定位置进入场景</figcaption></figure></div><div class="media media-grid"><figure class=""><img src="assets/img/dunhuang/imaginary-302.jpg" alt="302 窟倒塔中心柱的想象场景，附作品介绍"><figcaption>302 窟倒塔中心柱的想象场景，附作品介绍</figcaption></figure><figure class=""><img src="assets/img/dunhuang/title.jpg" alt="标题画面"><figcaption>标题画面</figcaption></figure></div>
+<h2>三个想象场景</h2>
+<p>洞窟采用写实风格忠实还原壁画细节；作品内部的想象场景则采用绘画风格，把壁画里的关键元素——九色鹿与层叠的山、金刚经变里的佛与山水——变成可以走进去的三维空间。</p><div class="gallery"><img src="assets/img/dunhuang/art-deer.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/art-sutra.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/art-pillar.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/scene-deer.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/scene-sutra.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/scene-pillar.jpg" alt="VR Dunhuang"></div><p class='muted'>上：原作；下：游戏中对应的想象场景。</p>
+<h2>手势交互：我的工作</h2>
+<p>游戏的交互全部基于 Oculus 的<strong>手部追踪手势识别</strong>，这是整个项目最大的技术挑战，也是我负责的核心部分：</p>
+<ul>
+<li><strong>手势控制系统</strong>：用手直接抓取艺术品并放置到指定位置；用手指点选 UI（例如 Back 按钮）。给手加上 Grabber、给物体加上 Grabbable 组件并设定抓取手势；抓取功能做成独立的子物体以便维护。为了避免雕像在手里“漂浮”或者手像抓着空气，雕像没有用更省资源的 Cube Collider，而是用了贴合模型的碰撞体。</li>
+<li><strong>传送系统</strong>：用特定手势在场景间传送。传送逻辑分成两部分——挂在玩家身上发起交互的 Teleport Interactor，和挂在目标位置接收交互的 Teleport Interactable。</li>
+<li>场景中的交互逻辑设计与实现。遇到的问题主要靠官方文档和示例工程解决。</li>
+</ul><div class="gallery"><img src="assets/img/dunhuang/grab.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/select.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/teleport.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/grab-inspector.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/teleport-interactor.jpg" alt="VR Dunhuang"><img src="assets/img/dunhuang/hierarchy.jpg" alt="VR Dunhuang"></div><p class='muted'>抓取与放置、手指点选、手势传送；Grabbable / HandGrabInteractable 组件配置、传送目标点、Hand Interactor 层级。</p>
+<h2>分工与回顾</h2>
+<div class="split"><div><h4>我负责</h4><ul><li>手势追踪交互（抓取、点选、传送）</li><li>场景中的交互逻辑设计与实现</li></ul></div><div><h4 style="color:var(--muted)">团队其他成员负责</h4><ul><li>场景规划、白盒与美术搭建</li><li>三维模型与贴图（中心柱从白模到完成）</li></ul></div></div><div class="media media-grid"><figure class=""><img src="assets/img/dunhuang/pillar-models.jpg" alt="中心柱：白模 → 雕刻 → 上色"><figcaption>中心柱：白模 → 雕刻 → 上色</figcaption></figure><figure class=""><img src="assets/img/dunhuang/unity-editor.jpg" alt="Unity 工程中的场景"><figcaption>Unity 工程中的场景</figcaption></figure></div><div class="note">团队分成交互设计和美术设计两部分，从场景规划和白盒开始，逐步用模型和细节填满每个场景。这个项目让我学会了用官方文档和示例工程解决实际问题，尤其是手势控制和 VR 交互，也加深了我对 VR 交互设计的理解。</div>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>手势追踪交互：抓取 / 点选 / 传送</li><li>场景交互逻辑</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>Unity</li><li>Meta XR / Oculus Integration SDK</li><li>C#</li><li>Meta Quest 3</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="fishing.html"><small>← 上一个</small>《捕鱼大作战》</a><a href="dreams-dont-die.html" style="text-align:right"><small>下一个 →</small>Dreams Don't Die</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

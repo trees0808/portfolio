@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StarFisher · 李嘉纬作品集</title>
+<meta name="description" content="StarFisher：CMU ETC BVW Round 3 两周项目，面向 Xbox Adaptive Controller 的 Unity 多人对抗游戏。李嘉纬共同设计黄金矿工 × 贪吃蛇机制，负责两名玩家的移动与抓取。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>StarFisher</h1>
+    <p class="sub">海底主题的多人对抗游戏，为 Xbox Adaptive Controller 设计：操控一条鱼伸出鱼钩钓水母，钓到的水母像贪吃蛇一样跟在身后，送回海葵基地得分；钩到别人的链子就能把它打断。CMU ETC BVW 第 3 轮，两周完成。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2025.10 · 两周</div></div><div class="fact"><div class="k">团队</div><div class="v">CMU ETC BVW · 5 人（2 程序 / 2 美术 / 1 音乐）</div></div><div class="fact"><div class="k">引擎</div><div class="v">Unity · URP · Xbox Adaptive Controller</div></div><div class="fact"><div class="k">我的角色</div><div class="v">共同设计 · 程序：玩家移动与抓取</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><figure class=""><img src="assets/img/starfisher/cover.jpg" alt="StarFisher 标题画面"><figcaption>StarFisher 标题画面</figcaption></figure></div>
+    <div class="cols">
+      <div><h2>项目概述</h2>
+<p>BVW 第 3 轮的命题是为 <strong>Xbox Adaptive Controller</strong>（面向行动不便玩家的无障碍手柄）设计游戏：输入只有少数几个大按钮和扳机，所以玩法必须简单到用两三个输入就能玩，又要在 2–4 人同场时有足够的对抗。</p>
+<p>我们把“黄金矿工”和“贪吃蛇”合在了一起：玩家是一条鱼，用 LT / RT 转向，按 A 伸出可伸缩的鱼钩钓水母；钓到的水母串成一条链跟在身后，带回海葵基地就得分。链子越长分越多，但也越容易被别人钩断——攒到 3 只以上还能按 B 换一颗星星炸弹，把周围的对手炸晕。一局 120 秒，每 20 秒刷新一批水母。</p>
+<h2>规则一览</h2>
+<div class="gallery"><figure class=""><video src="assets/video/starfisher/1.mp4" poster="assets/video/starfisher/1.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>2–4 支队伍，用手柄控制你的鱼</figcaption></figure><figure class=""><video src="assets/video/starfisher/2.mp4" poster="assets/video/starfisher/2.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>LT / RT 左右转向</figcaption></figure><figure class=""><video src="assets/video/starfisher/3.mp4" poster="assets/video/starfisher/3.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>按 A 伸出鱼钩，钓到的水母串在身后</figcaption></figure><figure class=""><video src="assets/video/starfisher/4.mp4" poster="assets/video/starfisher/4.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>海葵会收走你的水母并计分</figcaption></figure><figure class=""><video src="assets/video/starfisher/5.mp4" poster="assets/video/starfisher/5.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>钩到别人的链子就能打断它</figcaption></figure><figure class=""><video src="assets/video/starfisher/6.mp4" poster="assets/video/starfisher/6.jpg" autoplay muted loop playsinline controls preload="metadata"></video><figcaption>3 只以上水母 → 按 B 换星星炸弹，炸晕对手</figcaption></figure></div>
+<h2>我负责的部分</h2>
+<div class="split"><div><h4>我负责</h4><ul><li>与全组共同设计“黄金矿工 × 贪吃蛇”的核心机制</li><li>两名玩家的移动：适配 Adaptive Controller 的转向与推进</li><li>鱼钩的伸出、收回与抓取判定</li></ul></div><div><h4 style="color:var(--muted)">团队其他成员负责</h4><ul><li>水母链的蛇形跟随（位置历史跟随）与计分、炸弹（另一位程序）</li><li>海底场景、角色与 Shader Graph 水面 / 水波（2 位美术）</li><li>音乐与音效（音乐）</li></ul></div></div><div class="note">给 Adaptive Controller 做设计是这一轮最有意思的约束：输入少，所以每个输入都得“一按就有事发生”。鱼钩是唯一的进攻和采集手段，转向是唯一的移动——玩法的全部深度都压在这两个动作的时机上。</div>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>共同设计</li><li>玩家移动</li><li>鱼钩伸缩与抓取</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>Unity · URP</li><li>C#</li><li>Xbox Adaptive Controller</li><li>Git</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="bbr.html"><small>← 上一个</small>Beat Battle Royale</a><a href="fishing.html" style="text-align:right"><small>下一个 →</small>《捕鱼大作战》</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

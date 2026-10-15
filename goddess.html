@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goddess · 李嘉纬作品集</title>
+<meta name="description" content="Goddess：基于课程自研引擎（TypeScript + HTML）的 2D 动作 Roguelike。李嘉纬负责游戏设计与从零搭建 UI 系统。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>Goddess</h1>
+    <p class="sub">一款等距视角的 2D 动作 Roguelike，运行在老师提供的 TypeScript + HTML 自研引擎框架上。引擎只有底层接口和类似 Unity 的 MonoBehaviour 结构，没有动画系统和 UI 系统——UI 系统是我从零写的。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2024.06 – 2024.07</div></div><div class="fact"><div class="k">团队</div><div class="v">北京工业大学 · 课程项目 · 3 人</div></div><div class="fact"><div class="k">引擎</div><div class="v">课程自研引擎框架 · TypeScript · HTML</div></div><div class="fact"><div class="k">我的角色</div><div class="v">游戏设计 · UI 系统程序</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><figure class=""><img src="assets/img/goddess/logo.jpg" alt="Goddess 开始界面"><figcaption>Goddess 开始界面</figcaption></figure><div class="media media-grid"><figure class=""><img src="assets/img/goddess/gameplay.jpg" alt="等距视角的战斗"><figcaption>等距视角的战斗</figcaption></figure><figure class=""><img src="assets/img/goddess/blessings.jpg" alt="祝福选择面板"><figcaption>祝福选择面板</figcaption></figure></div></div>
+    <div class="cols">
+      <div><h2>项目概述</h2>
+<p>Goddess 是一款 2D 动作冒险 Roguelike：玩家在不断变化的地下遗迹里八方向移动、攻击、闪避（带无敌帧）、使用技能；每关击败一定数量的敌人后进入下一关，战斗中和关卡之间可以获得临时强化或“祝福”符文。敌人有快速小怪、重甲守卫、施法者等不同类型，对应不同的战斗策略。</p>
+<p>课程的目的是用最原始的引擎框架做一款完整的游戏，在过程中理解引擎的原理：场景和预制体在代码层面是怎么组织的、引擎核心组件是怎么协作的。没有可视化编辑器，场景和预制体都是手写的 YAML / JSON，要在控制台里启动游戏才能看到效果。</p><div class="media media-grid"><figure class=""><img src="assets/img/goddess/editor.jpg" alt="开发环境：完全用代码编辑游戏"><figcaption>开发环境：完全用代码编辑游戏</figcaption></figure><figure class=""><img src="assets/img/goddess/prefab-yaml.jpg" alt="手写的预制体：Transform、RigidBody、BoxCollider 与子节点"><figcaption>手写的预制体：Transform、RigidBody、BoxCollider 与子节点</figcaption></figure></div>
+<h2>从零搭建 UI 系统</h2>
+<p>引擎只能显示图片和文字，没有点击检测，更没有 UI 组件。这是我遇到的最大挑战，也是我负责的核心部分：</p>
+<ul>
+<li>先实现<strong>点击检测</strong>：用逆矩阵把屏幕坐标换算到各节点的局部坐标系，判断点击是否落在指定范围内。</li>
+<li>参考 Unity 的结构实现 <strong>Canvas 组件</strong>，作为 UI 层的基类；在它之上做出 Button、Image、Text 等组件，以及祝福面板、重开按钮、相机跟随等具体界面。</li>
+<li>血条、菜单、祝福选择面板等所有游戏内 UI 都建立在这套系统上。</li>
+</ul><div class="media media-grid"><figure class=""><img src="assets/img/goddess/ui-files.jpg" alt="UI 系统源码：Canvas、Button、UILayer、BlessPanel 等"><figcaption>UI 系统源码：Canvas、Button、UILayer、BlessPanel 等</figcaption></figure><figure class=""><img src="assets/img/goddess/blessings.jpg" alt="祝福选择面板"><figcaption>祝福选择面板</figcaption></figure></div>
+<h2>美术流程</h2>
+<p>2D 素材其实来自 3D 模型：在 Blender 里用像素风 Shader 渲染，从固定视角抓取循环帧生成角色动画；场景也是 Blender 渲染出来的一张图。</p><div class="media media-grid"><figure class=""><img src="assets/img/goddess/blender.jpg" alt="Blender 中渲染的场景"><figcaption>Blender 中渲染的场景</figcaption></figure><figure class=""><img src="assets/img/goddess/escaped.jpg" alt="通关画面"><figcaption>通关画面</figcaption></figure></div>
+<h2>分工与回顾</h2>
+<div class="split"><div><h4>我负责</h4><ul><li>游戏设计</li><li>UI 系统（点击检测、Canvas、按钮 / 图片 / 文字组件）</li><li>性能相关：场景与对象预加载、内存管理</li></ul></div><div><h4 style="color:var(--muted)">团队其他成员负责</h4><ul><li>引擎框架（老师提供）</li><li>核心玩法逻辑（主程）</li><li>美术资产与优化</li></ul></div></div><div class="note">这个项目让我对引擎底层的理解变得具体：现在看一个 Unity 的 prefab 文本文件，大致就能读懂它在做什么。</div>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>游戏设计</li><li>UI 系统（从零实现）</li><li>预加载与内存管理</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>TypeScript</li><li>HTML / Canvas</li><li>Blender（像素风渲染）</li><li>飞书（需求文档与开发日志）</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="dreams-dont-die.html"><small>← 上一个</small>Dreams Don't Die</a><span></span></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

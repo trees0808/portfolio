@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>《捕鱼大作战》BOSS 玩法与策划工具 · 李嘉纬作品集</title>
+<meta name="description" content="途游游戏《捕鱼大作战》游戏客户端开发实习：BOSS 玩法落地、鱼类路径编辑器、GM 工具、协议对接。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>《捕鱼大作战》BOSS 玩法与策划工具</h1>
+    <p class="sub">途游游戏线上商业项目实习：根据策划文档落地 3 个正式上线的 BOSS 玩法，并为策划与开发团队做了鱼类路径编辑器与 GM 调试工具。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2024.02 – 2024.11</div></div><div class="fact"><div class="k">公司</div><div class="v">途游游戏</div></div><div class="fact"><div class="k">引擎</div><div class="v">Unity · C#</div></div><div class="fact"><div class="k">职位</div><div class="v">游戏客户端开发实习生（玩法方向）</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><figure class=""><img src="assets/img/tuyoo/logo.jpg" alt="途游游戏"><figcaption>途游游戏</figcaption></figure><div class="note">线上商业项目，受保密约定限制，本页只描述工作内容，不展示内部截图、工具界面与代码。</div></div>
+    <div class="cols">
+      <div><h2>BOSS 玩法落地</h2>
+<ul>
+<li>根据策划文档实现具有新玩法的 BOSS，与美术、后端、测试协作完成版本更新。</li>
+<li>实习期间累计完成 <strong>3 个正式上线的 BOSS</strong>，单个开发周期约 4–5 周，覆盖从需求评审、实现、联调到上线回归的完整流程。每个 BOSS 基于统一的 BOSS 效果基类扩展：登场、结算演出、得分展示、倍率与最终收益的表现都走同一套事件流程，新 BOSS 只需要覆写自己的演出部分。</li>
+<li>这段经历让我习惯了站在策划需求和程序实现之间做翻译：先把规则拆成状态和数值，再谈怎么实现。</li>
+</ul>
+<h2>策划工具：鱼类路径编辑器</h2>
+<ul>
+<li>独立开发鱼类路径编辑器，策划可以<strong>可视化配置鱼群的移动轨迹</strong>，并直接导入本体项目，服务关卡与玩法内容制作。</li>
+<li>原本需要程序改参数、重新打包验证的流程，变成策划自己就能迭代的流程。</li>
+</ul>
+<h2>GM 工具与数据上报</h2>
+<ul>
+<li>维护 GM 调试工具：开发者在游戏内输入命令 ID 和参数，就能快速调用特定功能——例如用自定义数据（获得的金币数等）直接触发一次 BOSS 击杀结算，或者立即查看某段 CG。策划和测试不用打到对应环节就能验收内容。</li>
+<li>与后端对接协议，上报低帧率、设备过热和玩家行为等信息，为性能优化和玩法调优提供数据。</li>
+</ul>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>3 个上线 BOSS 玩法</li><li>鱼类路径编辑器（独立）</li><li>GM 工具维护</li><li>后端协议对接与数据上报</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>Unity</li><li>C#</li><li>Editor 扩展</li><li>Git</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="starfisher.html"><small>← 上一个</small>StarFisher</a><a href="vr-dunhuang.html" style="text-align:right"><small>下一个 →</small>VR Dunhuang</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

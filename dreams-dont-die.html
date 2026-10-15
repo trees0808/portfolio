@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dreams Don&#x27;t Die《不想死的游戏人》 · 李嘉纬作品集</title>
+<meta name="description" content="Dreams Don&#x27;t Die 不想死的游戏人：Unity HDRP 第一人称情绪叙事游戏，李嘉纬的本科毕业设计。独立完成游戏设计、场景设计与制作、玩法实现与 HDRP 渲染。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>Dreams Don't Die《不想死的游戏人》</h1>
+    <p class="sub">“I see blue in your eyes, but I also see the light.” 一款围绕独立游戏开发者心理历程的沉浸式情绪叙事游戏：4 个玩法关卡与 5 个叙事场景交替推进，用空间、光影、漂浮文字和音乐带玩家走过迷茫、困境、焦虑、崩溃到希望。我的本科毕业设计。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2024.05 起 · 2025.05 完成毕业设计</div></div><div class="fact"><div class="k">团队</div><div class="v">个人项目 · 两位同学协助美术</div></div><div class="fact"><div class="k">引擎</div><div class="v">Unity · HDRP · Shader Graph</div></div><div class="fact"><div class="k">我的角色</div><div class="v">发起者 · 游戏设计 · 场景与渲染 · 玩法程序 · UI</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><figure class=""><img src="assets/img/dreams/cover.jpg" alt="Dreams Don't Die：游戏机墓地"><figcaption>Dreams Don't Die：游戏机墓地</figcaption></figure></div>
+    <div class="cols">
+      <div><h2>项目概述</h2>
+<p>灵感来自 B 站纪录片《不想死的游戏人》——独立开发者在资金、市场和自我怀疑中挣扎的真实处境。我想把开发者的压力源（创作挫败、过劳、焦虑）编码成可以走进去的空间和可以破解的谜题，让从业者在游玩中完成一次象征性的释放，也让圈外人通过亲身体验理解创作的复杂。</p>
+<p>这是我发起并主导的项目：整体设计、全部场景的设计与制作、玩法都由我完成，两位同学帮忙制作了部分美术资产。项目最初作为课程小组作业开始，之后由我继续完善，成为我的本科毕业设计《面向情感氛围营造的沉浸式游戏设计与开发》（北京工业大学，2025 年 5 月）。</p>
+<p>游戏采用 Unity + HDRP 开发，发布于 Windows PC。第一人称视角，<strong>4 个玩法关卡与 5 个叙事场景交替穿插</strong>，按“寻找 — 追逐 — 释怀”的心理节奏排列：每个关卡之后接一个情绪场景，形成“行为体验 → 内心共鸣 → 情绪转折”的三段式循环。</p><figure class=""><img src="assets/img/dreams/thesis/structure.jpg" alt="游戏结构与流程：关卡与叙事场景交替（论文图 4.1）"><figcaption>游戏结构与流程：关卡与叙事场景交替（论文图 4.1）</figcaption></figure>
+<h2>设计：一条情绪曲线</h2>
+<p>整个游戏的策划核心是“情绪递进与氛围营造”。我先定下一条情绪曲线，再为每一段分配一种玩法或一个场景，并用场景关键词约束美术与音乐：</p>
+<table class="mat"><tr><th>顺序</th><th>类型</th><th>情绪阶段</th><th>设计关键词</th></tr>
+<tr><td>关卡 1</td><td>第一人称迷宫</td><td>迷茫</td><td>寻找 / 方向感缺失 / 遗迹感</td></tr>
+<tr><td>场景 1</td><td>游戏机墓地（幻想）</td><td>失落</td><td>失败记忆 / 荒凉沙滩 / 沉寂感</td></tr>
+<tr><td>关卡 2</td><td>倾斜玩具迷宫</td><td>困境</td><td>无力操控 / 微调失败 / 精疲力竭</td></tr>
+<tr><td>场景 2</td><td>昏暗办公室（现实）</td><td>压力</td><td>窒息空间 / 独白文字 / 重复性</td></tr>
+<tr><td>关卡 3</td><td>井字格追逐</td><td>焦虑</td><td>节奏紧迫 / 控制反应 / 紧张感</td></tr>
+<tr><td>场景 3</td><td>医院走廊（现实）</td><td>崩溃</td><td>线性空间 / 微光 / 病态感</td></tr>
+<tr><td>场景 3.5</td><td>海上车站（过渡）</td><td>重启</td><td>安静车站 / 列车鸣笛 / 梦境转折</td></tr>
+<tr><td>关卡 4</td><td>飞行收集光球</td><td>希望</td><td>飞行自由 / 空旷空间 / 光感流动</td></tr>
+<tr><td>场景 4</td><td>回到海滩（幻想）</td><td>愈合</td><td>开阔视野 / 阳光海滩 / 明朗色彩</td></tr></table>
+<p>每一段都用四类符号协同工作：<strong>物理符号</strong>决定玩家“在哪儿”感受情绪（场景构造、道具）；<strong>角色符号</strong>决定“以谁的身份”感受（第一人称、角色状态——例如医院里失去奔跑与跳跃）；<strong>视听符号</strong>决定“如何感觉”（色调光影、音乐、雾效）；<strong>叙事符号</strong>决定“感受到什么”（漂浮文字）。</p>
+<h2>五个叙事场景</h2>
+<ul>
+<li><strong>游戏机墓地</strong>：荒凉海滩上散落着锈蚀、屏幕破裂、倾倒的复古街机——梦想崩塌的墓碑。傍晚斜照 + HDRP 体积雾压低视野；没有任务提示，玩家靠地面触发点推进，漂浮文字像回忆碎片一样逐字升起。</li>
+<li><strong>昏暗办公室</strong>：窄长的开放式办公室，只有尽头一盏吊灯亮着。进入后玩家失去跳跃与奔跑、移速下降，模拟“心理迟滞”；文字悬浮在桌椅、投影幕和键盘上方——“为何没有人给予反馈”“我逐渐开始讨厌点开评论区”。</li>
+<li><strong>医院</strong>：抽象化的手术台与走廊，没有窗户与自然光。这是全游戏控制力最弱的一段：移速再降、镜头有轻微延迟、路径线性、没有选择，让玩家代入“无力反抗现实”。文字出现在高空、墙角、地面甚至前进路径上，带漂移动画。</li>
+<li><strong>海上车站</strong>：走到医院走廊尽头，一扇门缓缓打开——门后不是走廊，而是海面上的木质站台和驶来的列车。两段在同一个 Unity Scene 里，靠后处理体积切换、音乐淡入淡出和控制变化完成从“压抑”到“重启”的跳变，不加载新场景。文字从“你的身体正在死去”变成反问“它们还是你的梦魇吗？”。</li>
+<li><strong>希望的海滩</strong>：与第一个场景同样的地形与构图，但换成明亮的沙粒贴图、晴空天空盒和带波纹反射的海面；游戏机墓碑整齐安静地留在沙丘里——失败被接纳，成为记忆的一部分。首尾呼应成一个圆环。</li>
+</ul><div class="gallery"><img src="assets/img/dreams/thesis/s1-beach-text.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/s2-office-text.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/s3-hospital-wake.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/s3-door-transition.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/s3-station.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/s4-hope-beach.jpg" alt="Dreams Dont Die"></div><p class='muted'>游戏机墓地 → 办公室 → 医院醒来 → 走廊尽头的门 → 海上车站 → 希望的海滩。</p>
+<h2>四个玩法关卡</h2>
+<ul>
+<li><strong>关卡 1 · 第一人称迷宫（迷茫）</strong>：多层交错的圆形迷宫，中心有一道垂直光柱——目标清晰、路径混沌。左下角有实时小地图辅助定位；路边陈列着倾倒的办公桌、游戏机外壳、被踩踏的开发文档。</li>
+<li><strong>关卡 2 · 玩具迷宫（困境）</strong>：玩家不控制角色，而是用鼠标拖拽或 WASD 倾斜整个迷宫底板，让小球滚到终点。小球有加速度与惯性，需要不断微调、反复尝试；没有背景音乐，只有滚动与碰撞声。</li>
+<li><strong>关卡 3 · 井字格追逐（焦虑）</strong>：九宫格场地里追一颗会逃的光球。光球只能前后左右移动、优先往玩家反方向逃、在外圈按逆时针规则绕圈；唯一的通关方法是先走到光球对侧最远处，再沿直线逼它进出口。场景是办公地毯 + 玻璃隔断 + 办公桌——在现实框架里追逐梦想。</li>
+<li><strong>关卡 4 · 飞行收集（希望）</strong>：操控飞行器穿越一座上下颠倒的梦境城市，收集空中的光球。没有敌人、没有时限，只有飞向、收集、再飞向。</li>
+</ul><div class="gallery"><img src="assets/img/dreams/thesis/l1-maze.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/l2-toy-maze.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/l3-grid-layout.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/l3-office-chase.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/l4-inverted-city.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/l4-flight.jpg" alt="Dreams Dont Die"></div>
+<h2>实现：HDRP 渲染与情绪过渡</h2>
+<ul>
+<li><strong>室外</strong>：Physically Based Sky + Volume Fog，按场景调太阳角度、雾密度与散射色——墓地压低曝光、加浓雾；希望海滩降雾提曝光。Screen Space Reflection 强化水面与湿沙反射，Contact / Micro Shadows 补细节阴影。</li>
+<li><strong>室内</strong>：主光源 + 局部点光源（台灯、吊灯、手术灯）分区照明；Light Probe / Reflection Probe + 静态物体 Baked GI，既保证间接光质量又降低运行时开销；局部后处理体积调低曝光、冷却色温、降饱和。</li>
+<li><strong>情绪过渡</strong>：在医院与车站的交界处放两个基于世界空间的后处理体积，玩家进入触发区时自动切换 Color Grading / Exposure / Bloom / Fog——雾降、曝光升、色调转亮——不加载场景就完成情绪跳变。飞行关卡里不同高度的体积再做雾与色调的微调。</li>
+</ul><div class="media media-grid"><figure class=""><img src="assets/img/dreams/thesis/post-volumes.jpg" alt="两个基于世界空间的后处理体积"><figcaption>两个基于世界空间的后处理体积</figcaption></figure><figure class=""><img src="assets/img/dreams/thesis/same-scene-two-renders.jpg" alt="同一场景的两种渲染：医院走廊与海上车站"><figcaption>同一场景的两种渲染：医院走廊与海上车站</figcaption></figure></div><div class="media media-grid"><figure class=""><img src="assets/img/dreams/thesis/hdrp-sky-fog.jpg" alt="Sky and Fog Global Volume"><figcaption>Sky and Fog Global Volume</figcaption></figure><figure class=""><img src="assets/img/dreams/thesis/baked-gi.jpg" alt="烘焙光照与反射探针"><figcaption>烘焙光照与反射探针</figcaption></figure></div>
+<h2>实现：漂浮文字、溶解光球与各关卡系统</h2>
+<ul>
+<li><strong>空间文字系统（SentenceController）</strong>：自制特效文字预制体，脚本获取子节点的所有 TextMeshPro，用协程逐字渐现、绕 Y 轴旋转（速度按动画曲线从快到慢）、达到旋转次数上限后缩放淡出并禁用；SetStartWithEffect() 可按场景触发或重启，让叙事节点与玩家进度同步。</li>
+<li><strong>光球溶解（Shader Graph）</strong>：Simple Noise + Step 做遮罩，Alpha Clip Threshold 输出剔除，脚本在收集事件时缓慢推高 Clip 值；保留自发光通道，溶解中仍有微光。海滩与飞行关卡的光球共用。</li>
+<li><strong>小地图</strong>：迷宫上方一台正交摄像机只渲染 UI 层，输出到 RenderTexture 绑定到 RawImage；玩家头顶一个跟随 Sphere 作为位置标记。</li>
+<li><strong>玩具迷宫</strong>：鼠标拖拽或 WASD 累加旋转增量，X / Z 轴钳制在 ±23°，灵敏度参数可调。</li>
+<li><strong>井字格追逐</strong>：Pos1–Pos9 九个碰撞盒记录玩家所在格；光球 Target 脚本在玩家进入触发器时调用 GameManager.MoveTarget()，按逃逸规则算下一格并用 Lerp 平滑移动；玩家在 Pos1、光球在 Pos9 时判定通关，播放逃逸音效并切换场景。</li>
+<li><strong>飞行关卡</strong>：基于 Asset Store 的飞行工具包搭建，接入项目自己的拾取判定与 UI 计数；收集完毕触发结局。</li>
+</ul><div class="media media-grid"><figure class=""><img src="assets/img/dreams/thesis/text-effect.jpg" alt="漂浮文字：渐现、旋转、淡出"><figcaption>漂浮文字：渐现、旋转、淡出</figcaption></figure><figure class=""><img src="assets/img/dreams/thesis/dissolve-shadergraph.jpg" alt="光球溶解的 Shader Graph"><figcaption>光球溶解的 Shader Graph</figcaption></figure></div><div class="media media-grid"><figure class=""><img src="assets/img/dreams/thesis/dissolve-demo.jpg" alt="溶解过程（Clip 值变化）"><figcaption>溶解过程（Clip 值变化）</figcaption></figure><figure class=""><img src="assets/img/dreams/thesis/minimap-overlay.jpg" alt="小地图：正交摄像机与迷宫重合放置"><figcaption>小地图：正交摄像机与迷宫重合放置</figcaption></figure></div><div class="media media-grid"><figure class=""><img src="assets/img/dreams/thesis/grid-hierarchy.jpg" alt="井字格：Pos1–Pos9 检测点与 Target"><figcaption>井字格：Pos1–Pos9 检测点与 Target</figcaption></figure><figure class=""><img src="assets/img/dreams/thesis/flight-kit.jpg" alt="飞行工具包的接入"><figcaption>飞行工具包的接入</figcaption></figure></div>
+<h2>成果</h2>
+<div class="gallery"><img src="assets/img/dreams/thesis/r1-maze.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r2-beach.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r3-toy-maze.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r4-office.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r5-chase.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r6-hospital.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r7-station.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r8-flight.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/thesis/r9-final-beach.jpg" alt="Dreams Dont Die"></div><p class='muted'>按游玩顺序：迷宫 → 游戏机墓地 → 玩具迷宫 → 办公室 → 井字格追逐 → 医院 → 海上车站 → 飞行 → 回到海滩。</p><div class="gallery"><img src="assets/img/dreams/main-menu.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/pause-menu.jpg" alt="Dreams Dont Die"><img src="assets/img/dreams/6.jpg" alt="Dreams Dont Die"></div>
+<h2>回顾</h2>
+<p>功能测试覆盖了小地图同步、迷宫旋转手感、光球逃逸逻辑、飞行拾取、音乐过渡、文字特效与关卡切换，均达到预期。后续想做的：丰富局部美术细节、给迷宫加时限或给追逐加光球分裂等可选挑战、给小地图加朝向标识。</p>
+<div class="note">这个项目让我真正学会了 HDRP，也让我第一次系统地用“情绪曲线”来组织一整款游戏的玩法与场景。它也让我意识到视觉叙事和玩法之间需要平衡——后来在 Grey Waves 里我把更多精力放在了“玩法如何推动叙事”上。</div>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>项目发起与整体游戏设计</li><li>情绪曲线与关卡 / 场景规划</li><li>全部场景设计与制作、HDRP 渲染</li><li>漂浮文字 / 溶解 Shader / 小地图 / 迷宫 / 追逐 AI 等玩法实现</li><li>UI 与 PC 端发布</li></ul></div><div class="aside-box"><h3>团队协助</h3><ul><li>部分美术资产（两位同学）</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>Unity HDRP</li><li>C#</li><li>Shader Graph</li><li>TextMeshPro</li><li>Unity Input System</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="vr-dunhuang.html"><small>← 上一个</small>VR Dunhuang</a><a href="goddess.html" style="text-align:right"><small>下一个 →</small>Goddess</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

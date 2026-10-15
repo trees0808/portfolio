@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A(i)dol 开发中 · 李嘉纬作品集</title>
+<meta name="description" content="A(i)dol：CMU ETC 2026 秋季项目，AI 生成驱动的偶像养成手游。李嘉纬负责 Unity 前端、系统规则落地、UI 交互流程与内容配置工具。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">JIAWEI<span>.</span>LI</a>
+    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <ul>
+      <li><a href="index.html#projects">项目</a></li>
+      <li><a href="blog.html">博客</a></li>
+      <li><a href="index.html#experience">经历</a></li>
+      <li><a href="index.html#skills">技能</a></li>
+      <li><a href="index.html#contact">联系</a></li>
+      <li><a href="assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="proj-hero">
+  <div class="wrap">
+    <a class="back" href="index.html#projects">← 返回项目列表</a>
+    <h1>A(i)dol <span class="status">开发中</span></h1>
+    <p class="sub">“You are not managing an idol. You ARE one.” 一款竖屏单机偶像养成手游：玩家的输入与游戏内选择会影响自己偶像的形象、声音与展示视频，再进入 World 信息流获得粉丝。</p>
+    <div class="facts"><div class="fact"><div class="k">时间</div><div class="v">2026.08 – 至今（资料截至 2026.10.13）</div></div><div class="fact"><div class="k">团队</div><div class="v">CMU ETC · 6 人</div></div><div class="fact"><div class="k">引擎</div><div class="v">Unity 6 · URP 2D · C# · UGUI</div></div><div class="fact"><div class="k">我的角色</div><div class="v">Unity 前端 · 系统规则落地 · 内容配置与编辑器工具</div></div></div>
+  </div>
+</section>
+<section class="proj-body">
+  <div class="wrap">
+    <div class="media"><div class="phones"><figure><video src="assets/video/aidol/a1.mp4" poster="assets/video/aidol/a1.jpg" muted loop playsinline controls preload="metadata"></video><figcaption>Android 真机：启动、加载到开场</figcaption></figure><figure><video src="assets/video/aidol/a4.mp4" poster="assets/video/aidol/a4.jpg" muted loop playsinline controls preload="metadata"></video><figcaption>造型室：手指擦雾揭晓新造型</figcaption></figure><figure><video src="assets/video/aidol/a2.mp4" poster="assets/video/aidol/a2.jpg" muted loop playsinline controls preload="metadata"></video><figcaption>World：竖滑浏览偶像的视频</figcaption></figure><figure><video src="assets/video/aidol/a3.mp4" poster="assets/video/aidol/a3.jpg" muted loop playsinline controls preload="metadata"></video><figcaption>World：评论抽屉与点赞</figcaption></figure></div></div>
+    <div class="cols">
+      <div><h2>项目概述</h2>
+<p>A(i)dol 是 CMU ETC 2026 秋季学期项目，面向已经在做二创（剪辑、同人、OC、翻唱）的偶像与动漫粉丝。玩家从一张试镜邀请开始，经过面试、造型、录影，一步步把“自己的偶像”养到出道；AI 生成流水线负责形象、声音、音乐和视频，玩家的输入会影响这些结果。出道后进入叫 <strong>World</strong> 的竖屏信息流，在那里获得粉丝。</p>
+<p>我是两名 Unity 前端之一，负责把团队定下的系统规则变成可运行的数据、状态和界面流程，并给内容同学做配置和调试工具；后端与 AI 生成管线由队友负责。项目仍在开发中，本页内容基于 2026 年 10 月 13 日前的工作记录。</p><div class="media media-grid"><figure class=""><img src="assets/img/aidol/slide2.jpg" alt="中期汇报：试镜 → 训练 → 出道 → 粉丝"><figcaption>中期汇报：试镜 → 训练 → 出道 → 粉丝</figcaption></figure><figure class=""><img src="assets/img/aidol/slide5.jpg" alt="中期汇报：完整体验流程"><figcaption>中期汇报：完整体验流程</figcaption></figure></div>
+<h2>案例一：玩家流程与状态门控</h2>
+<p>游戏是一条有分支的主线：登录 → 面试 → 宿舍 → 造型 → 录影 → 夜间剧情 → World 查看成片。我在 9 月中旬先搭了这一层：</p>
+<ul>
+<li><strong>进度与持久化架构</strong>：进度枚举、一次性事件标记、本地 JSON / PlayerPrefs 存储、存储接口与后端存储适配，以及统一的 API 请求出口。</li>
+<li><strong>场景路由与主线检查点</strong>：剧情场景统一进出口，主线检查点决定玩家能进哪些场景；地图上的地点状态和任务 UI（完成 / 当前 / 锁定）、通知红点都由同一份进度驱动。</li>
+<li>9 月 23 日的 V1 把登录、面试、造型、录影、夜间剧情和 World 成片查看串成了第一条可以从头玩到尾的流程；之后的版本在此基础上调整顺序（例如录影改为从宿舍经地图进入）。</li>
+</ul>
+<div class="note">把“玩家现在在哪、能去哪”收敛成一份状态，是后面所有系统的前提。各界面只读状态、不各自维护进度，之后几次改流程顺序都没有动过界面代码。</div>
+<h2>案例二：体力与造型规则落地</h2>
+<p>团队定了资源规则：Dols（软通货）、Diamonds（硬通货）、Stamina（体力，初始 100）；主线的面试 / 造型 / 录影分别扣 5 / 20 / 20。我负责把规则接进数据配置、UI 状态和后端契约：</p>
+<ul>
+<li><strong>必扣事件只消费一次</strong>：用一次性标记保证主线消费不重复。</li>
+<li><strong>主线体力预留</strong>：可选消费必须给尚未完成的主线留出预算，玩家不会因为在支线花光体力而卡住主线。</li>
+<li><strong>造型室状态机</strong>：Intro → TierSelect → Wardrobe → Generating → Ready → Reveal → Feedback → Exit。套装与上下装互斥 / 覆盖、8 槽完成条件（早期版本为 7 槽）、付费解锁确认、Surprise 抽取与收据规则，都由数据表驱动——12 项肤色与 334 项造型来自团队的美术与数据表，我负责目录导入、配置、界面和服务对接。</li>
+<li><strong>生成与揭晓</strong>：发起生成请求、异步轮询结果、立绘与头像回填和缓存；完成后进入手指擦雾揭晓（可跳过，擦除阈值是可配置参数），之后可查看立绘大图。</li>
+</ul><div class="media media-grid"><figure class=""><img src="assets/img/aidol/slide15.jpg" alt="三种资源：Dols / Diamonds / Stamina（中期汇报）"><figcaption>三种资源：Dols / Diamonds / Stamina（中期汇报）</figcaption></figure><figure class=""><img src="assets/img/aidol/slide11.jpg" alt="从美术资产到 UI 系统（中期汇报）"><figcaption>从美术资产到 UI 系统（中期汇报）</figcaption></figure></div>
+<h2>案例三：生成等待体验的迭代</h2>
+<p>AI 生成有等待时间，需要一个机制盖住这段等待。最初的方案是一个 60 秒三消小游戏，我完成了它的原型：消除组数对应 Low / Mid / High 三档评级，奖励按档位发放，最多 3 局、每局扣 5 体力，多局取最佳评级只补奖励差额。</p>
+<p>9 月 29 日对 37 位 K-pop 粉丝做了第一次试玩；10 月 7 日团队决定把 World 扩为核心机制；10 月 8 日的版本<strong>删除了三消</strong>，等待期改为引导玩家浏览 World，生成完成后切换揭晓按钮、状态卡和通知。World 的常规解锁时机也相应从夜间剧情完成调整为造型完成。我按这些决定完成了机制切换。</p>
+<div class="note">三消是一个做完、测过、然后被团队决定砍掉的原型。对我来说这是整个项目里最有价值的一次迭代：原型做出来的成本足够低，“换”才能是一个轻松的决定。</div><div class="media media-grid"><figure class=""><img src="assets/img/aidol/slide7.jpg" alt="试玩反馈：玩家想要可带走的东西、正负两面的后果，World 是“WOW moment”"><figcaption>试玩反馈：玩家想要可带走的东西、正负两面的后果，World 是“WOW moment”</figcaption></figure><figure class=""><img src="assets/img/aidol/slide8.jpg" alt="原计划是三消小游戏 → 试玩后改为 World 浏览"><figcaption>原计划是三消小游戏 → 试玩后改为 World 浏览</figcaption></figure></div>
+<h2>案例四：内容生产工具</h2>
+<ul>
+<li><strong>World Studio</strong>：World 是一个可以从任意场景打开的独立预制体，保持页面与播放器状态。World Studio 集中提供账号、视频、评论数据的导入与校验（由数据库和 JSON 管理），预制体构建与迁移，运行时打开 / 关闭、翻页与调试。内容同学不进代码就能填充信息流。</li>
+<li><strong>UI 构建工具</strong>：从资源批量构建界面，重建时保留美术手调的布局与引用；后续构建只补缺失的面板和空引用。宿舍主场景 V2 的手调位置就是这样同步回工具的。</li>
+<li><strong>主题换皮配置</strong>：礼包页与合同页需要按不同公司（SOM / ERIS）换底图，原来文本是死坐标。我把文字、签名、印章、条款区域做成归一化配置，按底图比例布置，并提供预览 / 重排的编辑器工具。</li>
+<li><strong>Login 与邮件导出前端</strong>：玩家名字 / 可选邮箱输入与本地校验、会话参数、成片 ready 后的导出入口与请求状态反馈；邮件发送服务由后端负责。</li>
+</ul><div class="media media-grid"><figure class=""><img src="assets/img/aidol/slide12.jpg" alt="两家虚拟经纪公司 ERIS / SOM 的视觉识别——礼包页与合同页需要按公司换皮"><figcaption>两家虚拟经纪公司 ERIS / SOM 的视觉识别——礼包页与合同页需要按公司换皮</figcaption></figure><figure class=""><img src="assets/img/aidol/slide16.jpg" alt="学期交付：可玩原型 + AI 开发手册"><figcaption>学期交付：可玩原型 + AI 开发手册</figcaption></figure></div>
+<h2>交互与多端适配</h2>
+<ul>
+<li>World 的竖滑翻页、暂停、按钮 / 双击点赞、评论抽屉；评论点赞与本局发送的评论为本地状态，不是多人服务。Following、搜索、Shop、发布等入口在当前版本仍是占位。</li>
+<li>手机与平板采用不同的视频适配策略避免拉伸；RootHeightFitter 与独立的 World 缩放策略处理两种比例的布局。测试基线为 Pixel 手机与 Samsung 平板。</li>
+<li>对 Pixel 6 的触屏输入、安全区域、Canvas 缩放等做过一轮审查并列出真机测试清单；Web 发布与 iOS 内测做过可行性评估，尚未实施。</li>
+</ul>
+<p class="muted">开发过程中使用了 AI 辅助编码。项目主页：<a href="https://projects.etc.cmu.edu/aidol" target="_blank" rel="noopener">projects.etc.cmu.edu/aidol</a></p>
+</div>
+      <aside><div class="aside-box"><h3>负责内容</h3><ul><li>进度持久化 / 场景路由 / 主线检查点</li><li>体力、造型与抽取规则落地</li><li>三消原型 → World 浏览机制切换</li><li>World Studio / UI 构建工具 / 换皮配置</li><li>World 交互与手机 / 平板适配</li><li>Login、邮件导出等服务对接前端</li></ul></div><div class="aside-box"><h3>团队负责</h3><ul><li>后端与 AI 生成管线</li><li>经济与造型规则来源、数据表</li><li>美术资产与 UI 视觉</li><li>宿舍通知栏等其他前端模块</li></ul></div><div class="aside-box"><h3>工具</h3><ul><li>Unity 6 · URP 2D</li><li>C# / UGUI / 新 Input System</li><li>Editor 工具链</li><li>JSON 数据配置</li><li>Perforce</li></ul></div></aside>
+    </div>
+    <div class="proj-nav"><a href="grey-waves.html"><small>← 上一个</small>Grey Waves</a><a href="bbr.html" style="text-align:right"><small>下一个 →</small>Beat Battle Royale</a></div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

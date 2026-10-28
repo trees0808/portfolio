@@ -2,147 +2,177 @@
 title: Is Gaming a Superior Narrative Medium? Rethinking Storytelling Across Forms
 date: 2026-03-26
 slug: is-gaming-a-superior-narrative-medium-rethinking-storytelling-across-forms
-tags: 叙事设计, Grey Waves, 媒介比较
-summary: 我曾经认为游戏是终极的叙事媒介。做完 Grey Waves 之后，这个看法没有被推翻，但变得复杂得多。
+tags: Narrative Design, Grey Waves, Media
+summary: Reflections on narrative media and the challenges of aligning gameplay and story in Grey Waves.
+cover: 660f3b_8170c7bebc594a36be69408231675d76~mv2.png
 ---
 
-For a long time, I believed that games were the ultimate narrative medium.
+<figure class="post-figure">
+<a href="{{asset}}660f3b_8170c7bebc594a36be69408231675d76~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="View original image">
+<img src="{{asset}}660f3b_8170c7bebc594a36be69408231675d76~mv2.png" alt="Illustration accompanying the comparison of narrative media" width="1024" height="683" loading="lazy" decoding="async">
+</a>
+</figure>
 
-Compared to books and films, games seem to have everything: text, visuals, sound, and most importantly, interaction. They appear to be a natural evolution—a medium that absorbs all previous forms and adds agency on top of them. From this perspective, it felt almost obvious that games should be better at storytelling.
+<p>For a long time, I believed that games were the ultimate narrative medium.</p>
 
-However, after spending a semester developing a narrative game called *Grey Waves*, my view has changed.
+<p>Compared to books and films, games seem to have everything: text, visuals, sound, and most importantly, interaction. They appear to be a natural evolution—a medium that absorbs all previous forms and adds agency on top of them. From this perspective, it felt almost obvious that games should be <em>better</em> at storytelling.</p>
 
-Not reversed—but significantly deepened.
+<p>However, after spending a semester developing a narrative game called <em>Grey Waves</em>, my view has changed.</p>
 
-## The Illusion of "More Is Better"
+<p>Not reversed—but significantly deepened.<br>
+</p>
 
-At first glance, games seem powerful because they combine multiple channels of information. But in practice, having more expressive tools does not guarantee a stronger narrative.
+<h2>The Illusion of “More Is Better”</h2>
 
-In fact, many games fail precisely because these elements are not in harmony.
+<p>At first glance, games seem powerful because they combine multiple channels of information. But in practice, having more expressive tools does not guarantee a stronger narrative.</p>
 
-Text, visuals, sound, and gameplay often exist in parallel rather than in integration. The player may read dialogue, watch cutscenes, and perform mechanics—but these layers do not reinforce each other. Instead of deepening the experience, they fragment attention.
+<p>In fact, many games fail precisely because these elements are not in harmony.</p>
 
-In those moments, games can actually be less effective than books.
+<p>Text, visuals, sound, and gameplay often exist in parallel rather than in integration. The player may read dialogue, watch cutscenes, and perform mechanics—but these layers do not reinforce each other. Instead of deepening the experience, they fragment attention.</p>
 
-A novel, with only text, can guide the reader into an intensely focused mental space. There are no competing systems—no mechanics pulling you away, no UI demanding attention. The reader is free to fully engage with the author's intention.
+<p>In those moments, games can actually be <em>less effective</em> than books.</p>
 
-This kind of concentration is surprisingly difficult to achieve in games.
+<p>A novel, with only text, can guide the reader into an intensely focused mental space. There are no competing systems—no mechanics pulling you away, no UI demanding attention. The reader is free to fully engage with the author’s intention.</p>
 
-## What We Learned from *Grey Waves*
+<p>This kind of concentration is surprisingly difficult to achieve in games.<br>
+</p>
 
-To explain what I learned, I need to first explain the game we were trying to build.
+<h2>What we learned from <em>Grey Waves</em></h2>
 
-*Grey Waves* is a 3D narrative experience about a middle school teacher trapped in a time loop, reliving the day of a devastating earthquake. The player returns to the school again and again, trying to understand what happened—and whether anything can be changed.
+<p>To explain what I learned, I need to first explain the game we were trying to build.</p>
 
-The game is structured around two interconnected spaces:
+<p><em>Grey Waves</em> is a 3D narrative experience about a middle school teacher trapped in a time loop, reliving the day of a devastating earthquake. The player returns to the school again and again, trying to understand what happened—and whether anything can be changed.</p>
 
-- A time-loop world, where the earthquake unfolds in real time (a short, intense window of around 96 seconds)
-- A ruin or "mind palace" world, representing fragmented memories and emotional aftermath
+<p>The game is structured around two interconnected spaces:</p>
 
-Each loop, the player gathers more information: Who died? Why did they die? What choices led to those outcomes?
+<ul>
+<li><p>A <strong>time-loop world</strong>, where the earthquake unfolds in real time (a short, intense window of around 96 seconds)</p></li>
+<li><p>A <strong>ruin or “mind palace” world</strong>, representing fragmented memories and emotional aftermath</p></li>
+</ul>
 
-At first, the player acts blindly. But over time, knowledge accumulates, and the player begins to make deliberate decisions—choosing who to save, where to go, and what to do within a very limited timeframe.
+<p>Each loop, the player gathers more information:Who died? Why did they die? What choices led to those outcomes?</p>
 
-There are multiple ways to "solve" each situation:
+<p>At first, the player acts blindly. But over time, knowledge accumulates, and the player begins to make deliberate decisions—choosing who to save, where to go, and what to do within a very limited timeframe.</p>
 
-- A brute-force solution (fast but inefficient)
-- A more optimized solution (requires exploration and planning)
-- A narrative-driven solution (requires understanding the character and context)
+<p>There are multiple ways to “solve” each situation:</p>
 
-Eventually, the player can save everyone.
+<ul>
+<li><p>A brute-force solution (fast but inefficient)</p></li>
+<li><p>A more optimized solution (requires exploration and planning)</p></li>
+<li><p>A narrative-driven solution (requires understanding the character and context)</p></li>
+</ul>
 
-But in the final moment, the game reveals a truth: these people were never actually saved.
+<p>Eventually, the player can save everyone.</p>
 
-The entire experience is about confronting memory, guilt, and acceptance. The player is not changing the past—but learning to understand it.
+<p>But in the final moment, the game reveals a truth:</p>
 
-## Where Games Become Powerful
+<p>These people were never actually saved.</p>
 
-While building this system, I realized something fundamental:
+<p>The entire experience is about confronting memory, guilt, and acceptance. The player is not changing the past—but learning to understand it.</p>
 
-> A game becomes powerful only when playing it is equivalent to understanding it.
+<h2>Where Games Become Powerful</h2>
 
-In *Grey Waves*, the time loop is not just a mechanic—it is the narrative.
+<p>While building this system, I realized something fundamental:</p>
 
-- Repetition reflects trauma
-- Optimization reflects the human desire to "fix" the past
-- Discovery reflects the process of reconstructing memory
+<blockquote>
+<p>A game becomes powerful only when <em>playing it is equivalent to understanding it</em>.</p>
+</blockquote>
 
-The player does not just watch a story about regret—they perform regret, again and again, until meaning emerges.
+<p>In <em>Grey Waves</em>, the time loop is not just a mechanic—it <em>is</em> the narrative.</p>
 
-This is something books and films cannot fully replicate.
+<ul>
+<li><p>Repetition reflects trauma</p></li>
+<li><p>Optimization reflects the human desire to “fix” the past</p></li>
+<li><p>Discovery reflects the process of reconstructing memory</p></li>
+</ul>
 
-## Why This Is So Difficult
+<p>The player does not just watch a story about regret—they <em>perform</em> regret, again and again, until meaning emerges.</p>
 
-However, reaching this level of integration is extremely difficult.
+<p>This is something books and films cannot fully replicate.</p>
 
-Even in our own project, we constantly struggled with questions like:
+<h2>Why This Is So Difficult</h2>
 
-- Are players focusing on solving puzzles, or understanding characters?
-- Does the time pressure enhance emotion, or reduce reflection?
-- Are mechanics reinforcing the theme, or distracting from it?
+<p>However, reaching this level of integration is extremely difficult.</p>
 
-It is very easy for gameplay and narrative to drift apart.
+<p>Even in our own project, we constantly struggled with questions like:</p>
 
-And when they do, the experience weakens.
+<ul>
+<li><p>Are players focusing on solving puzzles, or understanding characters?</p></li>
+<li><p>Does the time pressure enhance emotion, or reduce reflection?</p></li>
+<li><p>Are mechanics reinforcing the theme, or distracting from it?</p></li>
+</ul>
 
-This is why many games, despite having rich audiovisual elements, fail to deliver a coherent narrative experience. In contrast, books and films—precisely because they are more constrained—can achieve a stronger sense of focus.
+<p>It is very easy for gameplay and narrative to drift apart.</p>
 
-## When Games Truly Work
+<p>And when they do, the experience weakens.</p>
 
-There are games that successfully achieve this integration.
+<p>This is why many games, despite having rich audiovisual elements, fail to deliver a coherent narrative experience. In contrast, books and films—precisely because they are more constrained—can achieve a stronger sense of focus.</p>
 
-Titles like *The Last of Us*, *BioShock Infinite*, and *Red Dead Redemption 2* demonstrate how mechanics, world design, and narrative can reinforce each other.
+<h2>When Games Truly Work</h2>
 
-In these cases:
+<p>There are games that successfully achieve this integration.</p>
 
-- Gameplay expresses emotional stakes
-- Systems reflect themes
-- Player actions deepen narrative meaning
+<p>Titles like The Last of Us, BioShock Infinite, and Red Dead Redemption 2 demonstrate how mechanics, world design, and narrative can reinforce each other.</p>
 
-Every playthrough becomes a continuous reinforcement of the story.
+<p>In these cases:</p>
 
-But achieving this is rare.
+<ul>
+<li><p>Gameplay expresses emotional stakes</p></li>
+<li><p>Systems reflect themes</p></li>
+<li><p>Player actions deepen narrative meaning</p></li>
+</ul>
 
-It requires not only technical skill, but alignment across design, art, narrative, and production. It also requires scale—something that is often impossible for small teams.
+<p>Every playthrough becomes a continuous reinforcement of the story.</p>
 
-## Why Other Media Still Matter
+<p>But achieving this is rare.</p>
 
-Because of this, books and films are not replaced by games.
+<p>It requires not only technical skill, but alignment across design, art, narrative, and production. It also requires scale—something that is often impossible for small teams.</p>
 
-They remain powerful precisely because of their limitations.
+<h2>Why Other Media Still Matter</h2>
 
-A book can guide thought with precision. A film can control rhythm and emotion through editing and framing.
+<p>Because of this, books and films are not replaced by games.</p>
 
-Games, on the other hand, give up control in exchange for agency.
+<p>They remain powerful precisely because of their limitations.</p>
 
-And agency introduces complexity.
+<p>A book can guide thought with precision.A film can control rhythm and emotion through editing and framing.</p>
 
-Without careful design, it can dilute meaning rather than strengthen it.
+<p>Games, on the other hand, give up control in exchange for agency.</p>
 
-## A More Honest Conclusion
+<p>And agency introduces complexity.</p>
 
-So, are games a superior narrative medium?
+<p>Without careful design, it can dilute meaning rather than strengthen it.</p>
 
-I no longer think the answer is simply yes.
+<h2>A More Honest Conclusion</h2>
 
-Instead, I would say this:
+<p>So, are games a superior narrative medium?</p>
 
-> Most games are not stronger than books or films. But a perfectly integrated game has the potential to surpass them.
+<p>I no longer think the answer is simply yes.</p>
 
-Games are not inherently more powerful—they are conditionally more powerful.
+<p>Instead, I would say this:</p>
 
-When mechanics, narrative, and player experience align, games can create something unique: not just observing a story, but living through it.
+<blockquote>
+<p>Most games are not stronger than books or films.<br>
+But a <em>perfectly integrated</em> game has the potential to surpass them.</p>
+</blockquote>
 
-## Final Thought
+<p>Games are not inherently more powerful—they are <em>conditionally</em> more powerful.</p>
 
-Working on *Grey Waves* changed how I think about storytelling.
+<p>When mechanics, narrative, and player experience align, games can create something unique:</p>
 
-The question is no longer whether games are better.
+<p>Not just observing a story, but <em>living through it</em>.</p>
 
-The real question is:
+<h2>Final Thought</h2>
 
-> Can we design games where every action carries meaning?
+<p>Working on <em>Grey Waves</em> changed how I think about storytelling.</p>
 
-If we can, then games are not just a combination of media.
+<p>The question is no longer whether games are better.</p>
 
-They are a fundamentally new form of expression.
+<p>The real question is:</p>
+
+<blockquote>
+<p>Can we design games where <em>every action carries meaning</em>?</p>
+</blockquote>
+
+<p>If we can, then games are not just a combination of media.</p>
+
+<p>They are a fundamentally new form of expression.</p>

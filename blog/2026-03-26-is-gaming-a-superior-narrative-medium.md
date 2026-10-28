@@ -4,7 +4,15 @@ date: 2026-03-26
 slug: is-gaming-a-superior-narrative-medium-rethinking-storytelling-across-forms
 tags: 叙事设计, Grey Waves, 媒介比较
 summary: 我曾经认为游戏是终极的叙事媒介。做完 Grey Waves 之后，这个看法没有被推翻，但变得复杂得多。
+cover: 660f3b_8170c7bebc594a36be69408231675d76~mv2.png
 ---
+
+
+<figure class="post-figure">
+<a href="{{asset}}660f3b_8170c7bebc594a36be69408231675d76~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="查看原图">
+<img src="{{asset}}660f3b_8170c7bebc594a36be69408231675d76~mv2.png" alt="游戏与不同叙事媒介的比较配图" width="1024" height="683" loading="lazy" decoding="async">
+</a>
+</figure>
 
 很长一段时间里，我相信游戏是终极的叙事媒介。
 
@@ -95,7 +103,7 @@ summary: 我曾经认为游戏是终极的叙事媒介。做完 Grey Waves 之�
 
 在这些作品里：
 
-- 玩法表达情感赌注
+- 玩法呈现角色在情感上面临的得失
 - 系统映照主题
 - 玩家行动加深叙事意义
 

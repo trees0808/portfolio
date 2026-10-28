@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Paid vs Free-to-Play: How Monetization Shapes Game Design · 李嘉纬作品集</title>
-<meta name="description" content="买断制游戏不像 F2P 那样依赖留存，为什么还是满是重复的清营地和收集品？答案藏在商业模式如何塑造设计优先级里。">
+<title>Paid vs Free-to-Play: How Monetization Shapes Game Design · Jiawei Li Portfolio</title>
+<meta name="description" content="How premium and free-to-play business models shape content volume, repetition, retention, and design priorities.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
@@ -14,85 +14,250 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="../../index.html">JIAWEI<span>.</span>LI</a>
-    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul>
-      <li><a href="../../index.html#projects">项目</a></li>
-      <li><a href="../../blog.html">博客</a></li>
-      <li><a href="../../index.html#experience">经历</a></li>
-      <li><a href="../../index.html#skills">技能</a></li>
-      <li><a href="../../index.html#contact">联系</a></li>
-      <li><a href="../../assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+      <li><a href="../../index.html#projects">Projects</a></li>
+      <li><a href="../../blog.html">Blog</a></li>
+      <li><a href="../../index.html#experience">Experience</a></li>
+      <li><a href="../../index.html#skills">Skills</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+      <li><a href="../../assets/李嘉纬_技术策划_简历.pdf" target="_blank">Résumé PDF</a></li>
     </ul>
   </div>
 </header>
 
 <article class="post">
   <div class="wrap">
-    <div class="post-top"><a class="back" href="../../blog.html">← 所有文章</a><a class="back lang" href="../paid-vs-free-to-play-how-monetization-shapes-game-design.html">中文版 →</a></div>
+    <div class="post-top"><a class="back" href="../../blog.html">← All articles</a><a class="back lang" href="../paid-vs-free-to-play-how-monetization-shapes-game-design.html">中文版 →</a></div>
     <h1>Paid vs Free-to-Play: How Monetization Shapes Game Design</h1>
-    <div class="post-meta">2026-04-25 · 约 3 分钟 · <span class="tags"><span class="tag">商业模式</span><span class="tag">内容结构</span><span class="tag">系统设计</span></span></div>
-    <div class="post-body"><h2>Introduction</h2>
-<p>Many premium games today promise dozens — sometimes hundreds — of hours of gameplay. But after a few hours, players often realize that much of that time is spent repeating familiar tasks: clearing camps, collecting scattered items, or completing structurally similar side missions.</p>
+    <div class="post-meta">2026-04-25 · 3 min read · <span class="tags"><span class="tag">Monetization</span><span class="tag">Content Design</span><span class="tag">Systems</span></span></div>
+    <details class="post-toc"><summary>Contents</summary><ul><li class="toc-level-2"><a href="#section-1">Introduction</a></li><li class="toc-level-2"><a href="#section-2">Designing for Value vs Designing for Retention</a></li><li class="toc-level-2"><a href="#section-3">The Hidden Pressure: Content Volume</a></li><li class="toc-level-2"><a href="#section-4">Industrialized Design vs Creative Density</a></li><li class="toc-level-2"><a href="#section-5">Risk Aversion in Premium Games</a></li><li class="toc-level-2"><a href="#section-6">Why Free-to-Play Feels Different</a></li><li class="toc-level-2"><a href="#section-7">Repetition Is Not a Failure — It’s a Trade-off</a></li><li class="toc-level-2"><a href="#section-8">A Question for Future Design</a></li><li class="toc-level-2"><a href="#section-9">Conclusion</a></li></ul></details>
+    <div class="post-body"><figure class="post-figure">
+<a href="../../assets/blog/660f3b_a7534c0b741842149d4f631a2a7ead9c~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="View original image">
+<img src="../../assets/blog/660f3b_a7534c0b741842149d4f631a2a7ead9c~mv2.png.webp" alt="Illustration comparing premium and free-to-play games" width="740" height="493" loading="lazy" decoding="async">
+</a>
+</figure>
+
+<h2 id="section-1"><strong>Introduction</strong></h2>
+
+<p>Many premium games today promise dozens — sometimes hundreds — of hours of gameplay.But after a few hours, players often realize that much of that time is spent repeating familiar tasks: clearing camps, collecting scattered items, or completing structurally similar side missions.</p>
+
 <p>This raises an interesting question:</p>
-<blockquote>
-<p>If paid games don&rsquo;t rely on retention the same way free-to-play games do, why do they still lean so heavily on repetitive design?</p>
-</blockquote>
-<p>The answer is not simply about creativity or lack thereof. It lies deeper — in how different monetization models fundamentally shape design priorities.</p>
-<h2>Designing for Value vs Designing for Retention</h2>
+
+<p><strong>If paid games don’t rely on retention the same way free-to-play games do, why do they still lean so heavily on repetitive design?</strong></p>
+
+<p>The answer is not simply about creativity or lack thereof.It lies deeper — in how different monetization models fundamentally shape design priorities.</p>
+
+<h2 id="section-2"><strong>Designing for Value vs Designing for Retention</strong></h2>
+
 <p>At a high level, premium and free-to-play games optimize for very different goals:</p>
+
 <ul>
-<li><strong>Premium games (buy-to-play)</strong> aim to justify a one-time purchase → &ldquo;Did I get my money&rsquo;s worth?&rdquo;</li>
-<li><strong>Free-to-play games</strong> aim to maximize ongoing engagement → &ldquo;Will I come back tomorrow?&rdquo;</li>
+<li><p><strong>Premium games (buy-to-play)</strong> aim to justify a one-time purchase</p>
+
+<p> → <em>“Did I get my money’s worth?”</em></p></li>
+<li><p><strong>Free-to-play games</strong> aim to maximize ongoing engagement</p>
+
+<p> → <em>“Will I come back tomorrow?”</em></p></li>
 </ul>
-<p>This difference creates two distinct design philosophies: premium games optimize for perceived value (total content volume); F2P games optimize for retention (repeat engagement loops).</p>
+
+<p>This difference creates two distinct design philosophies:</p>
+
+<ul>
+<li><p>Premium games optimize for <strong>perceived value (total content volume)</strong></p></li>
+<li><p>F2P games optimize for <strong>retention (repeat engagement loops)</strong></p></li>
+</ul>
+
 <p>And this is where repetitive structures in premium games begin to make sense.</p>
-<h2>The Hidden Pressure: Content Volume</h2>
-<p>For premium games, especially AAA titles, there is an implicit expectation: a $60–$70 game should last dozens of hours.</p>
-<p>This creates what can be called content anxiety.</p>
-<p>Developers are not just designing gameplay — they are designing enough gameplay.</p>
-<p>As a result, design often shifts toward reusable mission templates, expandable systems, and large quantities of structured content.</p>
-<p>Instead of asking &ldquo;Is this mechanic fresh?&rdquo;, the question becomes &ldquo;Can this mechanic scale to fill 40 hours?&rdquo;</p>
-<p>This leads to familiar patterns: outpost clearing, collectibles, repeated mission archetypes (escort, fetch, defend).</p>
-<p>Not because designers lack ideas, but because repeatable structures are the most reliable way to produce large volumes of content.</p>
-<h2>Industrialized Design vs Creative Density</h2>
+
+<h2 id="section-3"><strong>The Hidden Pressure: Content Volume</strong></h2>
+
+<p>For premium games, especially AAA titles, there is an implicit expectation:</p>
+
+<blockquote>
+<p>A $60–$70 game should last dozens of hours.</p>
+</blockquote>
+
+<p>This creates what can be called <strong>content anxiety</strong>.</p>
+
+<p>Developers are not just designing gameplay —they are designing <em>enough</em> gameplay.</p>
+
+<p>As a result, design often shifts toward:</p>
+
+<ul>
+<li><p>Reusable mission templates</p></li>
+<li><p>Expandable systems</p></li>
+<li><p>Large quantities of structured content</p></li>
+</ul>
+
+<p>Instead of asking:</p>
+
+<blockquote>
+<p>“Is this mechanic fresh?”</p>
+</blockquote>
+
+<p>The question becomes:</p>
+
+<blockquote>
+<p>“Can this mechanic scale to fill 40 hours?”</p>
+</blockquote>
+
+<p>This leads to familiar patterns:</p>
+
+<ul>
+<li><p>Outpost clearing</p></li>
+<li><p>Collectibles</p></li>
+<li><p>Repeated mission archetypes (escort, fetch, defend)</p></li>
+</ul>
+
+<p>Not because designers lack ideas,but because <strong>repeatable structures are the most reliable way to produce large volumes of content.</strong></p>
+
+<h2 id="section-4"><strong>Industrialized Design vs Creative Density</strong></h2>
+
 <p>AAA game development is, at its core, a form of industrial production.</p>
-<p>A single gameplay system must be understood quickly, be reused many times, and be produced efficiently by large teams.</p>
-<p>This naturally pushes design toward low system variety, high content volume — instead of high variety, high density of unique experiences.</p>
-<p>In other words: fewer mechanics, more combinations, even more repetition.</p>
-<p>From a production standpoint, this is logical. From a player perspective, it can feel like sameness.</p>
-<h2>Risk Aversion in Premium Games</h2>
-<p>Another key factor is risk.</p>
-<p>In premium games, the player pays upfront, first impressions matter significantly, and failure cannot easily be recovered through live updates or monetization loops.</p>
+
+<p>A single gameplay system must:</p>
+
+<ul>
+<li><p>Be understood quickly</p></li>
+<li><p>Be reused many times</p></li>
+<li><p>Be produced efficiently by large teams</p></li>
+</ul>
+
+<p>This naturally pushes design toward:</p>
+
+<blockquote>
+<p><strong>Low system variety, high content volume</strong></p>
+</blockquote>
+
+<p>Instead of:</p>
+
+<blockquote>
+<p><strong>High variety, high density of unique experiences</strong></p>
+</blockquote>
+
+<p>In other words:</p>
+
+<ul>
+<li><p>Fewer mechanics</p></li>
+<li><p>More combinations</p></li>
+<li><p>Even more repetition</p></li>
+</ul>
+
+<p>From a production standpoint, this is logical.From a player perspective, it can feel like sameness.</p>
+
+<h2 id="section-5"><strong>Risk Aversion in Premium Games</strong></h2>
+
+<p>Another key factor is <strong>risk</strong>.</p>
+
+<p>In premium games:</p>
+
+<ul>
+<li><p>The player pays upfront</p></li>
+<li><p>First impressions matter significantly</p></li>
+<li><p>Failure cannot easily be recovered through live updates or monetization loops</p></li>
+</ul>
+
 <p>This makes innovation risky.</p>
-<p>Design tends to favor familiar structures, proven mechanics, and predictable pacing. Because a safe 8/10 experience is often better than a risky 6/10.</p>
+
+<p>Design tends to favor:</p>
+
+<ul>
+<li><p>Familiar structures</p></li>
+<li><p>Proven mechanics</p></li>
+<li><p>Predictable pacing</p></li>
+</ul>
+
+<p>Because:</p>
+
+<blockquote>
+<p><strong>A safe 8/10 experience is often better than a risky 6/10.</strong></p>
+</blockquote>
+
 <p>Repetition, in this sense, becomes a form of stability.</p>
-<h2>Why Free-to-Play Feels Different</h2>
-<p>Interestingly, free-to-play games often feel more &ldquo;varied&rdquo; moment-to-moment — even though they are highly system-driven.</p>
-<p>That&rsquo;s because their goal is not to deliver a long continuous experience, but to continuously re-engage the player.</p>
-<p>This leads to short gameplay loops, frequent variation (events, modifiers, new mechanics), and high feedback frequency.</p>
-<p>However, this comes with its own trade-offs: systems are often built around monetization triggers, progression pacing may be artificially stretched, and design serves retention more than expression.</p>
-<p>So while F2P games may feel more dynamic in the short term, they are often more constrained at a systemic level.</p>
-<h2>Repetition Is Not a Failure — It&rsquo;s a Trade-off</h2>
-<p>It&rsquo;s easy to criticize repetitive mission design in premium games as lazy or uninspired.</p>
-<p>But in reality, it is often the result of deliberate trade-offs: scale vs uniqueness, stability vs experimentation, production feasibility vs creative ambition.</p>
+
+<h2 id="section-6"><strong>Why Free-to-Play Feels Different</strong></h2>
+
+<p>Interestingly, free-to-play games often feel more “varied” moment-to-moment — even though they are highly system-driven.</p>
+
+<p>That’s because their goal is not to deliver a long continuous experience, but to:</p>
+
 <blockquote>
-<p>Repetition is not a design failure — it is a structural consequence of the business model.</p>
+<p><strong>Continuously re-engage the player</strong></p>
 </blockquote>
-<h2>A Question for Future Design</h2>
+
+<p>This leads to:</p>
+
+<ul>
+<li><p>Short gameplay loops</p></li>
+<li><p>Frequent variation (events, modifiers, new mechanics)</p></li>
+<li><p>High feedback frequency</p></li>
+</ul>
+
+<p>However, this comes with its own trade-offs:</p>
+
+<ul>
+<li><p>Systems are often built around monetization triggers</p></li>
+<li><p>Progression pacing may be artificially stretched</p></li>
+<li><p>Design serves retention more than expression</p></li>
+</ul>
+
+<p>So while F2P games may feel more dynamic in the short term,they are often <strong>more constrained at a systemic level</strong>.</p>
+
+<h2 id="section-7"><strong>Repetition Is Not a Failure — It’s a Trade-off</strong></h2>
+
+<p>It’s easy to criticize repetitive mission design in premium games as lazy or uninspired.</p>
+
+<p>But in reality, it is often the result of deliberate trade-offs:</p>
+
+<ul>
+<li><p>Scale vs uniqueness</p></li>
+<li><p>Stability vs experimentation</p></li>
+<li><p>Production feasibility vs creative ambition</p></li>
+</ul>
+
+<p>In this sense:</p>
+
+<blockquote>
+<p><strong>Repetition is not a design failure — it is a structural consequence of the business model.</strong></p>
+</blockquote>
+
+<h2 id="section-8"><strong>A Question for Future Design</strong></h2>
+
 <p>This leads to a more interesting question:</p>
+
 <blockquote>
-<p>Are players really paying for hours, or are they paying for experience density?</p>
+<p>Are players really paying for <em>hours</em>, or are they paying for <em>experience density</em>?</p>
 </blockquote>
-<p>Many of the most memorable games are not the longest ones — but the ones where every moment feels intentional.</p>
-<p>Perhaps the future of game design lies somewhere in between: the sustainability of premium models, the dynamism of F2P systems, and a stronger focus on high-density, meaningful interactions.</p>
-<h2>Conclusion</h2>
-<p>Monetization does not just affect how games make money — it shapes how they are designed, structured, and experienced.</p>
-<p>Understanding this helps us move beyond surface-level criticism and toward more thoughtful discussions about the future of game design.</p>
-<p>Because in the end, the question is not just &ldquo;Is this game fun?&rdquo; but also:</p>
+
+<p>Many of the most memorable games are not the longest ones —but the ones where every moment feels intentional.</p>
+
+<p>Perhaps the future of game design lies somewhere in between:</p>
+
+<ul>
+<li><p>The sustainability of premium models</p></li>
+<li><p>The dynamism of F2P systems</p></li>
+<li><p>And a stronger focus on <strong>high-density, meaningful interactions</strong></p></li>
+</ul>
+
+<h2 id="section-9"><strong>Conclusion</strong></h2>
+
+<p>Monetization does not just affect how games make money —it shapes how they are designed, structured, and experienced.</p>
+
+<p>Understanding this helps us move beyond surface-level criticismand toward more thoughtful discussions about the future of game design.</p>
+
+<p>Because in the end, the question is not just:</p>
+
 <blockquote>
-<p>&ldquo;What kind of system is this game designed to serve?&rdquo;</p>
+<p>“Is this game fun?”</p>
+</blockquote>
+
+<p>But also:</p>
+
+<blockquote>
+<p><strong>“What kind of system is this game designed to serve?”</strong></p>
 </blockquote></div>
-    <div class="proj-nav"><a href="how-can-ai-help-us-with-game-designing.html"><small>← 更早</small>How Can AI Help Us with Game Designing?</a><span></span></div>
+    <div class="proj-nav"><a href="how-can-ai-help-us-with-game-designing.html"><small>← Older</small>How Can AI Help Us with Game Designing?</a><span></span></div>
   </div>
 </article>
 

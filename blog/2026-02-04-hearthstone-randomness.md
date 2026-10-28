@@ -4,7 +4,15 @@ date: 2026-02-04
 slug: hearthstone-between-randomness-and-agency
 tags: 炉石传说, 随机性, 数值设计
 summary: 炉石的随机不是叠在策略之上的，而是嵌在每一个策略决策里——这正是它让人一直动脑、一直想玩的原因。
+cover: 660f3b_f03bf4b9ebc542f2a588c14f707e7d80~mv2.jpg
 ---
+
+
+<figure class="post-figure">
+<a href="{{asset}}660f3b_f03bf4b9ebc542f2a588c14f707e7d80~mv2.jpg" target="_blank" rel="noopener noreferrer" aria-label="查看原图">
+<img src="{{asset}}660f3b_f03bf4b9ebc542f2a588c14f707e7d80~mv2.jpg" alt="炉石传说：随机性与策略" width="1200" height="628" loading="lazy" decoding="async">
+</a>
+</figure>
 
 《炉石传说》里的随机性在我看来几乎是完美的。这款游戏的核心是深度策略，但它没有把策略和随机分开，而是把两者紧紧绑在一起。随机不是加在策略之上的，而是嵌在每一个策略决策之内的。这种设计让我在根据变化动态调整策略时获得很强的满足感。它要求的持续思考完全占住了我的大脑，也让这个游戏极其上瘾。
 

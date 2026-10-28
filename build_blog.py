@@ -22,7 +22,7 @@ NAV = """<header class="nav">
 </header>
 """
 HEAD = """<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,8 +52,16 @@ def parse(path):
         if v[:1] == '"' and v[-1:] == '"': v = v[1:-1]
         meta[k.strip()] = v
     meta["tags"] = [t.strip() for t in meta.get("tags", "").split(",") if t.strip()]
-    meta["body"] = markdown.markdown(m.group(2), extensions=["smarty"])
-    body = m.group(2)
+    raw_body = m.group(2)
+    if os.path.basename(os.path.dirname(path)) != 'en':
+        # English smart quotes misread Chinese opening quotes. Convert text only,
+        # leaving HTML image attributes and links intact.
+        parts = re.split(r'(<[^>]+>)', raw_body)
+        raw_body = ''.join(part if part.startswith('<') else re.sub(r'"([^"\n]+)"', r'“\1”', part) for part in parts)
+        meta["body"] = markdown.markdown(raw_body)
+    else:
+        meta["body"] = markdown.markdown(raw_body, extensions=["smarty"])
+    body = html.unescape(re.sub(r'<[^>]+>', ' ', m.group(2)))
     cjk = len(re.findall(r"[\u4e00-\u9fff]", body)); words = len(re.findall(r"[A-Za-z]+", body))
     meta["minutes"] = max(1, round((cjk / 400) + (words / 220)))
     return meta
@@ -72,17 +80,34 @@ def write_post(p, lang, i, b, outdir, link_other):
     nav += f'<a href="{newer["slug"]}.html" style="text-align:right"><small>更新 →</small>{html.escape(newer["title"] if lang=="zh" else en[newer["slug"]]["title"])}</a>' if newer else "<span></span>"
     nav += "</div>"
     tags = "".join(f'<span class="tag">{t}</span>' for t in p["tags"])
-    page = (HEAD.format(title=html.escape(p["title"]), desc=html.escape(p["summary"]), b=b) + NAV.format(b=b) + f"""
+    body = p['body'].replace('{{asset}}', b + 'assets/blog/')
+    body = re.sub(r'(<img\s+src=")([^\"]+/assets/blog/[^\"]+)(")', lambda m: m[1]+m[2]+'.webp'+m[3], body)
+    headings = []
+    def add_heading(match):
+        level, content = match[1], match[2]
+        identifier = f'section-{len(headings)+1}'
+        headings.append((level, identifier, re.sub('<[^>]+>', '', content)))
+        return f'<h{level} id="{identifier}">{content}</h{level}>'
+    body = re.sub(r'<h([23])>(.*?)</h\1>', add_heading, body, flags=re.S)
+    toc = ''
+    if len(headings) >= 4:
+        entries = ''.join(f'<li class="toc-level-{level}"><a href="#{identifier}">{content}</a></li>' for level, identifier, content in headings)
+        toc = f'<details class="post-toc"><summary>{"文章目录" if lang=="zh" else "Contents"}</summary><ul>{entries}</ul></details>'
+    page = (HEAD.format(title=html.escape(p["title"]), desc=html.escape(p["summary"]), b=b, lang='zh-CN' if lang=='zh' else 'en') + NAV.format(b=b) + f"""
 <article class="post">
   <div class="wrap">
     <div class="post-top"><a class="back" href="{b}blog.html">← 所有文章</a><a class="back lang" href="{link_other}">{"English original →" if lang=="zh" else "中文版 →"}</a></div>
     <h1>{html.escape(p["title"])}</h1>
     <div class="post-meta">{p["date"]} · 约 {p["minutes"]} 分钟 · <span class="tags">{tags}</span></div>
-    <div class="post-body">{p["body"]}</div>
+    {toc}
+    <div class="post-body">{body}</div>
     {nav}
   </div>
 </article>
 """ + FOOT.format(b=b))
+    if lang == 'en':
+        for before, after in [('← 所有文章', '← All articles'), ('← 更早', '← Older'), ('更新 →', 'Newer →'), (' 分钟', ' min read'), (' · 约 ', ' · '), ('· 李嘉纬作品集', '· Jiawei Li Portfolio'), ('>项目</a>', '>Projects</a>'), ('>博客</a>', '>Blog</a>'), ('>经历</a>', '>Experience</a>'), ('>技能</a>', '>Skills</a>'), ('>联系</a>', '>Contact</a>'), ('>简历 PDF</a>', '>Résumé PDF</a>'), ('aria-label="菜单"', 'aria-label="Menu"')]:
+            page = page.replace(before, after)
     os.makedirs(outdir, exist_ok=True)
     with open(os.path.join(outdir, p["slug"] + ".html"), "w", encoding="utf-8") as f:
         f.write(page)
@@ -99,19 +124,20 @@ items = ""
 for p in posts:
     tags = "".join(f'<span class="tag">{t}</span>' for t in p["tags"])
     items += f"""
-    <a class="post-card" href="post/{p['slug']}.html">
-      <div class="post-date">{p['date']}</div>
-      <div>
+    <a class="post-card post-card-illustrated" href="post/{p['slug']}.html">
+      <img class="post-card-cover" src="assets/blog/{p['cover']}.thumb.webp" alt="" width="640" height="360" loading="lazy" decoding="async">
+      <div class="post-card-copy">
+        <div class="post-date">{p['date']}</div>
         <h3>{html.escape(p['title'])}</h3>
         <p>{html.escape(p['summary'])}</p>
         <div class="tags">{tags}<span class="muted" style="font-size:.8rem;margin-left:6px">约 {p['minutes']} 分钟</span></div>
       </div>
     </a>"""
-page = (HEAD.format(title="游戏设计博客", desc="李嘉纬的游戏设计博客：关于叙事、系统、随机性、商业模式与 AI 工具的思考。", b=b) + NAV.format(b=b) + f"""
+page = (HEAD.format(title="游戏设计博客", desc="李嘉纬的游戏设计博客：关于叙事、系统、随机性、商业模式与 AI 工具的思考。", b=b, lang='zh-CN') + NAV.format(b=b) + f"""
 <section class="proj-hero">
   <div class="wrap">
     <h1>游戏设计博客</h1>
-    <p class="sub">玩到或做到一个让我停下来想的东西，就写一篇。时间循环、随机性、叙事与机制的关系、商业模式如何塑造设计、AI 能帮上什么忙。文章原文为英文，这里是中文版，每篇都附英文原文链接。</p>
+    <p class="sub">玩到或做到一个让我停下来想的东西，就写一篇。时间循环、随机性、叙事与机制的关系、商业模式如何塑造设计、AI 能帮上什么忙。每篇均提供中文译文、完整英文原文与原有配图。</p>
   </div>
 </section>
 <section class="block">
@@ -129,7 +155,7 @@ h = open(idx, encoding="utf-8").read()
 teaser = ""
 for p in posts[:3]:
     teaser += f"""
-      <a class="post-card" href="post/{p['slug']}.html"><div class="post-date">{p['date']}</div><div><h3>{html.escape(p['title'])}</h3><p>{html.escape(p['summary'])}</p></div></a>"""
+      <a class="post-card post-card-illustrated" href="post/{p['slug']}.html"><img class="post-card-cover" src="assets/blog/{p['cover']}.thumb.webp" alt="" width="640" height="360" loading="lazy" decoding="async"><div class="post-card-copy"><div class="post-date">{p['date']}</div><h3>{html.escape(p['title'])}</h3><p>{html.escape(p['summary'])}</p></div></a>"""
 h = re.sub(r'(<div class="post-list" id="blog-teaser">).*?(</div>\n  </div>\n</section>)', lambda m: m.group(1) + teaser + "\n    " + m.group(2), h, count=1, flags=re.S)
 open(idx, "w", encoding="utf-8").write(h)
 print("updated index.html teaser")

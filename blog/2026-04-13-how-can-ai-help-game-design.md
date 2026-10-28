@@ -4,7 +4,15 @@ date: 2026-04-13
 slug: how-can-ai-help-us-with-game-designing
 tags: AI, 工具链, 原型
 summary: AI 不会替你设计游戏，但它会改变你做游戏的方式——在快速原型、内容生成和工具开发上最有用，在系统平衡和"好不好玩"上最无力。
+cover: 660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png
 ---
+
+
+<figure class="post-figure">
+<a href="{{asset}}660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="查看原图">
+<img src="{{asset}}660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png" alt="AI与游戏设计工作流配图" width="1024" height="585" loading="lazy" decoding="async">
+</a>
+</figure>
 
 *AI 不会替你设计游戏——但它会改变你做游戏的方式*
 

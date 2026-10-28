@@ -1,0 +1,72 @@
+{
+  "publishedPosts": 6,
+  "bodyImageOccurrences": 17,
+  "uniqueOriginalImages": 18,
+  "posts": [
+    {
+      "slug": "paid-vs-free-to-play-how-monetization-shapes-game-design",
+      "sourceTextCharacters": 4770,
+      "bodyImages": 1,
+      "cover": "660f3b_409b1d7dea2d4ba2b1f7edee131d76ba~mv2.png",
+      "sourceImageIds": [
+        "660f3b_a7534c0b741842149d4f631a2a7ead9c~mv2.png"
+      ]
+    },
+    {
+      "slug": "how-can-ai-help-us-with-game-designing",
+      "sourceTextCharacters": 6061,
+      "bodyImages": 1,
+      "cover": "660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png",
+      "sourceImageIds": [
+        "660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png"
+      ]
+    },
+    {
+      "slug": "is-gaming-a-superior-narrative-medium-rethinking-storytelling-across-forms",
+      "sourceTextCharacters": 5936,
+      "bodyImages": 1,
+      "cover": "660f3b_8170c7bebc594a36be69408231675d76~mv2.png",
+      "sourceImageIds": [
+        "660f3b_8170c7bebc594a36be69408231675d76~mv2.png"
+      ]
+    },
+    {
+      "slug": "successful-narrative-games-when-gameplay-becomes-story",
+      "sourceTextCharacters": 9689,
+      "bodyImages": 10,
+      "cover": "660f3b_76eabee11be14f94a4fc37d8b3fc806f~mv2.png",
+      "sourceImageIds": [
+        "660f3b_76eabee11be14f94a4fc37d8b3fc806f~mv2.png",
+        "660f3b_69525bd6134c4f54a58e4c814f19a88e~mv2.png",
+        "660f3b_454bc4bd93f144cf96af92d9647dfa25~mv2.png",
+        "660f3b_e47c3feff1b64705844907e6e3a79785~mv2.png",
+        "660f3b_ac1a3ad5613f437382f4a18ec1061fbb~mv2.png",
+        "660f3b_89977a98d05e429d8ec48873825d1d9a~mv2.png",
+        "660f3b_63c212c0a98d4beb8442ea96f7841230~mv2.png",
+        "660f3b_6d6673b37e704e5799ef437e3d8bdcae~mv2.png",
+        "660f3b_dec850b8878f4d918d25e7e9ec27ad90~mv2.png",
+        "660f3b_eac8b867ca7047369974d8665c9b5d78~mv2.png"
+      ]
+    },
+    {
+      "slug": "hearthstone-between-randomness-and-agency",
+      "sourceTextCharacters": 4667,
+      "bodyImages": 1,
+      "cover": "660f3b_f03bf4b9ebc542f2a588c14f707e7d80~mv2.jpg",
+      "sourceImageIds": [
+        "660f3b_f03bf4b9ebc542f2a588c14f707e7d80~mv2.jpg"
+      ]
+    },
+    {
+      "slug": "why-a-22-minute-loop-can-feel-bigger-than-an-open-world",
+      "sourceTextCharacters": 3275,
+      "bodyImages": 3,
+      "cover": "660f3b_f5887cf8d5254243b6193a8d8c3f1416~mv2.avif",
+      "sourceImageIds": [
+        "660f3b_f5887cf8d5254243b6193a8d8c3f1416~mv2.avif",
+        "660f3b_c6516837bda14b22a33e16b8322bc42b~mv2.png",
+        "660f3b_bdd8c94b074348dbbfd8819e4b3b81c0~mv2.png"
+      ]
+    }
+  ]
+}

@@ -194,3 +194,29 @@ article.post h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); }
 
 .post-top { display: flex; justify-content: space-between; gap: 12px; }
 .post-top .lang { color: var(--accent); }
+
+/* Restored blog images retain their source order and aspect ratio. */
+.post-card-illustrated { grid-template-columns: 220px minmax(0, 1fr); padding: 0; overflow: hidden; }
+.post-card-illustrated .post-card-cover { width: 100%; height: 100%; min-height: 180px; object-fit: cover; }
+.post-card-copy { min-width: 0; padding: 22px 24px; }
+.post-card-copy .post-date { margin-bottom: 7px; }
+.post-figure { margin: 1.8em 0; }
+.post-figure a { display: block; }
+.post-figure img { width: 100%; height: auto; border-radius: 10px; background: var(--card); }
+.post-image-label { font-size: .9rem; color: var(--muted); margin-bottom: -.5em; }
+.post-body { overflow-wrap: anywhere; }
+.post-body h2, .post-body h3 { scroll-margin-top: 90px; }
+.post-toc { margin: -8px 0 28px; padding: 15px 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.post-toc summary { cursor: pointer; font-weight: 500; }
+.post-toc ul { list-style: none; margin: 14px 0 0; padding: 0; font-size: .9rem; }
+.post-toc li { margin: 6px 0; }
+.post-toc .toc-level-3 { padding-left: 1.2em; }
+.post-toc a { color: var(--muted); }
+.post-toc a:hover { color: var(--accent); }
+@media (max-width: 640px) {
+  .post-card-illustrated { grid-template-columns: 1fr; gap: 0; }
+  .post-card-illustrated .post-card-cover { height: auto; min-height: 0; aspect-ratio: 16 / 9; }
+  .post-card-copy { padding: 18px; }
+  .post-top { flex-wrap: wrap; }
+  .post-figure { margin: 1.4em 0; }
+}

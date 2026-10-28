@@ -4,7 +4,15 @@ date: 2026-04-25
 slug: paid-vs-free-to-play-how-monetization-shapes-game-design
 tags: 商业模式, 内容结构, 系统设计
 summary: 买断制游戏不像 F2P 那样依赖留存，为什么还是满是重复的清营地和收集品？答案藏在商业模式如何塑造设计优先级里。
+cover: 660f3b_409b1d7dea2d4ba2b1f7edee131d76ba~mv2.png
 ---
+
+
+<figure class="post-figure">
+<a href="{{asset}}660f3b_a7534c0b741842149d4f631a2a7ead9c~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="查看原图">
+<img src="{{asset}}660f3b_a7534c0b741842149d4f631a2a7ead9c~mv2.png" alt="买断制与免费游戏商业模式对比配图" width="740" height="493" loading="lazy" decoding="async">
+</a>
+</figure>
 
 ## 引言
 

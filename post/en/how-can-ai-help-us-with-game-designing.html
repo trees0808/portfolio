@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How Can AI Help Us with Game Designing? · 李嘉纬作品集</title>
-<meta name="description" content="AI 不会替你设计游戏，但它会改变你做游戏的方式——在快速原型、内容生成和工具开发上最有用，在系统平衡和&quot;好不好玩&quot;上最无力。">
+<title>How Can AI Help Us with Game Designing? · Jiawei Li Portfolio</title>
+<meta name="description" content="Where AI helps with prototyping, content and tools, and where human judgment remains essential.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
@@ -14,132 +14,275 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="../../index.html">JIAWEI<span>.</span>LI</a>
-    <button class="nav-toggle" aria-label="菜单">☰</button>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
     <ul>
-      <li><a href="../../index.html#projects">项目</a></li>
-      <li><a href="../../blog.html">博客</a></li>
-      <li><a href="../../index.html#experience">经历</a></li>
-      <li><a href="../../index.html#skills">技能</a></li>
-      <li><a href="../../index.html#contact">联系</a></li>
-      <li><a href="../../assets/李嘉纬_技术策划_简历.pdf" target="_blank">简历 PDF</a></li>
+      <li><a href="../../index.html#projects">Projects</a></li>
+      <li><a href="../../blog.html">Blog</a></li>
+      <li><a href="../../index.html#experience">Experience</a></li>
+      <li><a href="../../index.html#skills">Skills</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+      <li><a href="../../assets/李嘉纬_技术策划_简历.pdf" target="_blank">Résumé PDF</a></li>
     </ul>
   </div>
 </header>
 
 <article class="post">
   <div class="wrap">
-    <div class="post-top"><a class="back" href="../../blog.html">← 所有文章</a><a class="back lang" href="../how-can-ai-help-us-with-game-designing.html">中文版 →</a></div>
+    <div class="post-top"><a class="back" href="../../blog.html">← All articles</a><a class="back lang" href="../how-can-ai-help-us-with-game-designing.html">中文版 →</a></div>
     <h1>How Can AI Help Us with Game Designing?</h1>
-    <div class="post-meta">2026-04-13 · 约 4 分钟 · <span class="tags"><span class="tag">AI</span><span class="tag">工具链</span><span class="tag">原型</span></span></div>
-    <div class="post-body"><p><em>AI Won&rsquo;t Design Your Game — But It Will Change How You Do It</em></p>
-<h2>Introduction</h2>
-<p>Over the past year, while working on Unity projects and building gameplay systems, I started to notice a growing gap between design ideas and implementation reality. Game design is not just about creativity—it is about iteration, system balancing, and constant testing.</p>
-<p>At the same time, AI tools have rapidly evolved. From generating code to creating art assets, it seems like AI can &ldquo;do everything.&rdquo; This naturally raises a question:</p>
-<blockquote>
-<p>Can AI actually help us design games?</p>
-</blockquote>
+    <div class="post-meta">2026-04-13 · 4 min read · <span class="tags"><span class="tag">AI</span><span class="tag">Tools</span><span class="tag">Prototyping</span></span></div>
+    <details class="post-toc"><summary>Contents</summary><ul><li class="toc-level-2"><a href="#section-1">AI Won't Design Your Game — But It Will Change How You Do It</a></li><li class="toc-level-2"><a href="#section-2">Introduction</a></li><li class="toc-level-2"><a href="#section-3">Where AI Actually Helps</a></li><li class="toc-level-3"><a href="#section-4">1. Rapid Prototyping: Reducing the Cost of Ideas</a></li><li class="toc-level-3"><a href="#section-5">2. Content Generation: From Inspiration to Raw Material</a></li><li class="toc-level-3"><a href="#section-6">3. Tooling and Pipelines: The Real Impact of AI</a></li><li class="toc-level-2"><a href="#section-7">Where AI Falls Short</a></li><li class="toc-level-3"><a href="#section-8">1. Lack of System-Level Thinking</a></li><li class="toc-level-3"><a href="#section-9">2. No Real Understanding of Player Experience</a></li><li class="toc-level-3"><a href="#section-10">3. Hallucination and Engineering Risk</a></li><li class="toc-level-2"><a href="#section-11">The Future: AI as a Co-Designer</a></li><li class="toc-level-3"><a href="#section-12">1. AI as a Creative Partner</a></li><li class="toc-level-3"><a href="#section-13">2. AI-Driven Workflows</a></li><li class="toc-level-2"><a href="#section-14">Conclusion</a></li></ul></details>
+    <div class="post-body"><figure class="post-figure">
+<a href="../../assets/blog/660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png" target="_blank" rel="noopener noreferrer" aria-label="View original image">
+<img src="../../assets/blog/660f3b_2aa133eedaf747349329ab46c4dce4fa~mv2.png.webp" alt="Illustration of AI and game design" width="1024" height="585" loading="lazy" decoding="async">
+</a>
+</figure>
+
+<h2 id="section-1"><strong>AI Won't Design Your Game — But It Will Change How You Do It</strong></h2>
+
+<h2 id="section-2">Introduction</h2>
+
+<p>Over the past year, while working on Unity projects and building gameplay systems, I started to notice a growing gap between <em>design ideas</em> and <em>implementation reality</em>. Game design is not just about creativity—it is about iteration, system balancing, and constant testing.</p>
+
+<p>At the same time, AI tools have rapidly evolved. From generating code to creating art assets, it seems like AI can “do everything.” This naturally raises a question:</p>
+
+<p><strong>Can AI actually help us design games?</strong></p>
+
 <p>The short answer is: yes—but not in the way most people expect.</p>
+
 <p>AI is not replacing game designers. Instead, it is fundamentally reshaping how game design is done—especially in prototyping, content creation, and tool development.</p>
-<h2>Where AI Actually Helps</h2>
-<h3>1. Rapid Prototyping: Reducing the Cost of Ideas</h3>
-<p>Game design is inherently iterative. Most ideas don&rsquo;t work the first time—they need to be tested, adjusted, and sometimes discarded entirely.</p>
+
+<h2 id="section-3">Where AI Actually Helps</h2>
+
+<h3 id="section-4">1. Rapid Prototyping: Reducing the Cost of Ideas</h3>
+
+<p>Game design is inherently iterative. Most ideas don’t work the first time—they need to be tested, adjusted, and sometimes discarded entirely.</p>
+
 <p>This is where AI shines.</p>
+
 <p>AI can:</p>
+
 <ul>
-<li>Generate basic gameplay scripts</li>
-<li>Suggest system structures</li>
-<li>Help implement quick UI or interaction prototypes</li>
+<li><p>Generate basic gameplay scripts</p></li>
+<li><p>Suggest system structures</p></li>
+<li><p>Help implement quick UI or interaction prototypes</p></li>
 </ul>
-<p>In my own workflow, especially when experimenting with small gameplay mechanics, AI significantly reduces the time needed to go from idea → playable prototype. Instead of spending hours writing boilerplate code, I can focus on testing whether the idea itself is fun.</p>
-<p>AI reduces the cost of iteration, which is the core of game design.</p>
-<p>This is not about replacing developers—it&rsquo;s about accelerating exploration.</p>
-<h3>2. Content Generation: From Inspiration to Raw Material</h3>
+
+<p>In my own workflow, especially when experimenting with small gameplay mechanics, AI significantly reduces the time needed to go from <em>idea → playable prototype</em>. Instead of spending hours writing boilerplate code, I can focus on testing whether the idea itself is fun.</p>
+
+<blockquote>
+<p><strong>AI reduces the cost of iteration, which is the core of game design.</strong></p>
+</blockquote>
+
+<p>This is not about replacing developers—it’s about accelerating exploration.</p>
+
+<h3 id="section-5">2. Content Generation: From Inspiration to Raw Material</h3>
+
 <p>AI is also powerful in generating creative content:</p>
+
 <ul>
-<li>Character concepts</li>
-<li>Dialogue drafts</li>
-<li>Environment ideas</li>
-<li>Visual references</li>
+<li><p>Character concepts</p></li>
+<li><p>Dialogue drafts</p></li>
+<li><p>Environment ideas</p></li>
+<li><p>Visual references</p></li>
 </ul>
+
 <p>However, one important reality is often overlooked:</p>
+
 <blockquote>
-<p>Raw AI-generated content is not production-ready.</p>
+<p><strong>Raw AI-generated content is not production-ready.</strong></p>
 </blockquote>
-<p>In real game pipelines, assets must go through structured processes—whether it&rsquo;s proper material setup (e.g., PBR workflows), animation integration, or performance optimization.</p>
-<p>AI outputs are best treated as inspiration, drafts, and intermediate materials.</p>
+
+<p>In real game pipelines, assets must go through structured processes—whether it’s proper material setup (e.g., PBR workflows), animation integration, or performance optimization.</p>
+
+<p>AI outputs are best treated as:</p>
+
+<ul>
+<li><p><strong>Inspiration</strong></p></li>
+<li><p><strong>Drafts</strong></p></li>
+<li><p><strong>Intermediate materials</strong></p></li>
+</ul>
+
 <p>For example, an AI-generated environment concept might guide level design, but it still requires human decisions to ensure gameplay clarity, navigation, and performance.</p>
+
 <p>AI helps you start faster—but finishing still requires design thinking.</p>
-<h3>3. Tooling and Pipelines: The Real Impact of AI</h3>
-<p>From my experience, the most meaningful impact of AI in game design is not in generating content—but in enhancing tools.</p>
+
+<h3 id="section-6">3. Tooling and Pipelines: The Real Impact of AI</h3>
+
+<p>From my experience, the most meaningful impact of AI in game design is not in generating content—but in <strong>enhancing tools</strong>.</p>
+
 <p>In my previous work, I built:</p>
+
 <ul>
-<li>GM debugging tools</li>
-<li>Gameplay configuration systems</li>
-<li>A path editor for level design</li>
+<li><p>GM debugging tools</p></li>
+<li><p>Gameplay configuration systems</p></li>
+<li><p>A path editor for level design</p></li>
 </ul>
+
 <p>These tools significantly improved iteration speed for designers and developers.</p>
+
 <p>Now imagine integrating AI into this workflow:</p>
+
 <ul>
-<li>AI-assisted level editing</li>
-<li>Automated parameter tuning</li>
-<li>Smart debugging suggestions</li>
-<li>Natural language → in-engine actions</li>
+<li><p>AI-assisted level editing</p></li>
+<li><p>Automated parameter tuning</p></li>
+<li><p>Smart debugging suggestions</p></li>
+<li><p>Natural language → in-engine actions</p></li>
 </ul>
+
 <p>However, there is a critical engineering principle:</p>
+
 <blockquote>
-<p>AI should not directly control the game engine. It should operate through a structured middleware layer.</p>
+<p><strong>AI should not directly control the game engine. It should operate through a structured middleware layer.</strong></p>
 </blockquote>
-<p>Instead of letting AI manipulate low-level systems, we can let AI output high-level intentions, and let the engine handle execution.</p>
+
+<p>Instead of letting AI manipulate low-level systems, we can:</p>
+
+<ul>
+<li><p>Let AI output <em>high-level intentions</em></p></li>
+<li><p>Let the engine handle execution</p></li>
+</ul>
+
 <p>This aligns with modern AI integration practices, where systems use abstraction layers to ensure stability and prevent unpredictable behavior.</p>
-<p>In other words, AI becomes a tool for designers, not a replacement for the engine.</p>
-<h2>Where AI Falls Short</h2>
-<h3>1. Lack of System-Level Thinking</h3>
-<p>Game design is not just about isolated features—it is about systems: feedback loops, balance between mechanics, player progression.</p>
+
+<p>In other words, AI becomes a <strong>tool for designers</strong>, not a replacement for the engine.</p>
+
+<h2 id="section-7">Where AI Falls Short</h2>
+
+<h3 id="section-8">1. Lack of System-Level Thinking</h3>
+
+<p>Game design is not just about isolated features—it is about systems:</p>
+
+<ul>
+<li><p>Feedback loops</p></li>
+<li><p>Balance between mechanics</p></li>
+<li><p>Player progression</p></li>
+</ul>
+
 <p>AI can generate individual ideas, but it often struggles to understand how systems interact over time.</p>
-<p>For example, a combat mechanic may seem interesting in isolation, but it might break pacing, difficulty, or resource balance.</p>
+
+<p>For example:</p>
+
+<ul>
+<li><p>A combat mechanic may seem interesting in isolation</p></li>
+<li><p>But it might break pacing, difficulty, or resource balance</p></li>
+</ul>
+
 <p>These are system-level decisions that require holistic thinking—something AI currently lacks.</p>
-<h3>2. No Real Understanding of Player Experience</h3>
-<p>Through my own project experience, especially in narrative-driven games, I realized that designing a system and creating a good player experience are very different challenges.</p>
-<p>AI does not feel tension, understand pacing, or experience frustration or satisfaction.</p>
-<p>It cannot truly answer: &ldquo;Is this fun?&rdquo; &ldquo;Does this moment feel meaningful?&rdquo;</p>
+
+<h3 id="section-9">2. No Real Understanding of Player Experience</h3>
+
+<p>Through my own project experience, especially in narrative-driven games, I realized that <em>designing a system</em> and <em>creating a good player experience</em> are very different challenges.</p>
+
+<p>AI does not:</p>
+
+<ul>
+<li><p>Feel tension</p></li>
+<li><p>Understand pacing</p></li>
+<li><p>Experience frustration or satisfaction</p></li>
+</ul>
+
+<p>It cannot truly answer:</p>
+
+<ul>
+<li><p>“Is this fun?”</p></li>
+<li><p>“Does this moment feel meaningful?”</p></li>
+</ul>
+
 <p>These are human-centered questions.</p>
+
 <p>AI can assist in building systems—but it cannot evaluate emotional impact.</p>
-<h3>3. Hallucination and Engineering Risk</h3>
+
+<h3 id="section-10">3. Hallucination and Engineering Risk</h3>
+
 <p>Another major limitation is reliability.</p>
-<p>AI can generate incorrect logic, misuse engine APIs, and produce inconsistent results.</p>
+
+<p>AI can:</p>
+
+<ul>
+<li><p>Generate incorrect logic</p></li>
+<li><p>Misuse engine APIs</p></li>
+<li><p>Produce inconsistent results</p></li>
+</ul>
+
 <p>In complex systems like Unity or Unreal, this becomes a real engineering risk.</p>
+
 <p>To make AI usable in production, we must constrain it with:</p>
+
 <ul>
-<li>Structured systems (e.g., ECS, state machines)</li>
-<li>Clear data flows</li>
-<li>Validation layers</li>
+<li><p>Structured systems (e.g., ECS, state machines)</p></li>
+<li><p>Clear data flows</p></li>
+<li><p>Validation layers</p></li>
 </ul>
-<p>Modern approaches emphasize making AI outputs traceable and controllable, rather than treating them as black-box solutions.</p>
+
+<p>Modern approaches emphasize making AI outputs <strong>traceable and controllable</strong>, rather than treating them as black-box solutions.</p>
+
 <p>Without these constraints, AI becomes more dangerous than helpful.</p>
-<h2>The Future: AI as a Co-Designer</h2>
+
+<h2 id="section-11">The Future: AI as a Co-Designer</h2>
+
 <p>Looking forward, AI will not replace designers—but it will redefine the design process.</p>
-<h3>1. AI as a Creative Partner</h3>
+
+<h3 id="section-12">1. AI as a Creative Partner</h3>
+
 <p>The future workflow may look like this:</p>
+
 <ul>
-<li>Designers define goals and constraints</li>
-<li>AI generates variations and suggestions</li>
-<li>Designers evaluate and refine</li>
+<li><p>Designers define goals and constraints</p></li>
+<li><p>AI generates variations and suggestions</p></li>
+<li><p>Designers evaluate and refine</p></li>
 </ul>
-<p>AI becomes a co-designer—not an autonomous creator.</p>
-<h3>2. AI-Driven Workflows</h3>
-<p>We are already seeing early forms of this in advanced pipelines: task-based AI systems, state-driven decision models, automated testing and iteration loops.</p>
-<p>These approaches focus on making AI decisions transparent, structuring outputs, and integrating with existing game systems.</p>
-<p>This is not about replacing creativity—it&rsquo;s about scaling it.</p>
-<h2>Conclusion</h2>
-<p>AI is often presented as a revolutionary force that will &ldquo;design games for us.&rdquo; In reality, its role is much more practical—and much more interesting.</p>
-<p>AI helps us prototype faster, generate ideas, and build better tools.</p>
-<p>But it cannot understand systems deeply, feel player experience, or make final design decisions.</p>
+
+<p>AI becomes a <strong>co-designer</strong>—not an autonomous creator.</p>
+
+<h3 id="section-13">2. AI-Driven Workflows</h3>
+
+<p>We are already seeing early forms of this in advanced pipelines:</p>
+
+<ul>
+<li><p>Task-based AI systems</p></li>
+<li><p>State-driven decision models</p></li>
+<li><p>Automated testing and iteration loops</p></li>
+</ul>
+
+<p>These approaches focus on:</p>
+
+<ul>
+<li><p>Making AI decisions transparent</p></li>
+<li><p>Structuring outputs</p></li>
+<li><p>Integrating with existing game systems</p></li>
+</ul>
+
+<p>This is not about replacing creativity—it’s about scaling it.</p>
+
+<h2 id="section-14">Conclusion</h2>
+
+<p>AI is often presented as a revolutionary force that will “design games for us.” In reality, its role is much more practical—and much more interesting.</p>
+
+<p>AI helps us:</p>
+
+<ul>
+<li><p>Prototype faster</p></li>
+<li><p>Generate ideas</p></li>
+<li><p>Build better tools</p></li>
+</ul>
+
+<p>But it cannot:</p>
+
+<ul>
+<li><p>Understand systems deeply</p></li>
+<li><p>Feel player experience</p></li>
+<li><p>Make final design decisions</p></li>
+</ul>
+
 <blockquote>
-<p>AI will not replace game designers—but designers who use AI will replace those who don&rsquo;t.</p>
+<p><strong>AI will not replace game designers—but designers who use AI will replace those who don’t.</strong></p>
 </blockquote>
+
 <p>The future of game design is not human vs AI.</p>
-<p>It is human + AI, working together to create better, faster, and more meaningful experiences.</p></div>
-    <div class="proj-nav"><a href="is-gaming-a-superior-narrative-medium-rethinking-storytelling-across-forms.html"><small>← 更早</small>Is Gaming a Superior Narrative Medium? Rethinking Storytelling Across Forms</a><a href="paid-vs-free-to-play-how-monetization-shapes-game-design.html" style="text-align:right"><small>更新 →</small>Paid vs Free-to-Play: How Monetization Shapes Game Design</a></div>
+
+<p>It is <strong>human + AI</strong>, working together to create better, faster, and more meaningful experiences.</p></div>
+    <div class="proj-nav"><a href="is-gaming-a-superior-narrative-medium-rethinking-storytelling-across-forms.html"><small>← Older</small>Is Gaming a Superior Narrative Medium? Rethinking Storytelling Across Forms</a><a href="paid-vs-free-to-play-how-monetization-shapes-game-design.html" style="text-align:right"><small>Newer →</small>Paid vs Free-to-Play: How Monetization Shapes Game Design</a></div>
   </div>
 </article>
 

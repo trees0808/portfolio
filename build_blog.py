@@ -4,6 +4,9 @@ Run:  python3 build_blog.py
 Each post is a .md file with a YAML-ish header (title / date / slug / tags / summary), then markdown body.
 Keeping /post/<slug> as the URL means links to the old Wix blog keep working."""
 import os, re, html, markdown
+import hashlib
+CSS_VERSION = hashlib.sha256(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "style.css"), "rb").read()).hexdigest()[:12]
+
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 NAV = """<header class="nav">
@@ -30,11 +33,11 @@ HEAD = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{b}assets/style.css">
+<link rel="stylesheet" href="{b}assets/style.css?v=CSS_CACHE_VERSION">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
 </head>
 <body>
-"""
+""".replace("CSS_CACHE_VERSION", CSS_VERSION)
 FOOT = """
 <footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
 <script src="{b}assets/main.js"></script>

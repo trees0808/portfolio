@@ -3,6 +3,9 @@
 Run:  python3 build_projects.py   (from the site folder)
 Edit the text here, re-run, and the HTML pages are regenerated."""
 import html, os, re
+import hashlib
+CSS_VERSION = hashlib.sha256(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "style.css"), "rb").read()).hexdigest()[:12]
+
 
 HEAD = """<!DOCTYPE html>
 <html lang="zh-CN">
@@ -13,7 +16,7 @@ HEAD = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=CSS_CACHE_VERSION">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0f12'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23ffb84d' font-family='sans-serif' font-weight='700'>李</text></svg>">
 </head>
 <body>
@@ -31,7 +34,7 @@ HEAD = """<!DOCTYPE html>
     </ul>
   </div>
 </header>
-"""
+""".replace("CSS_CACHE_VERSION", CSS_VERSION)
 
 FOOT = """
 <footer><div class="wrap">© 2026 Jiawei Li · jiaweil8.com</div></footer>
